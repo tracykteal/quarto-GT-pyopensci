@@ -1,0 +1,73 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  page-navigation: true
+  title: "Unlocking Dynamic Reproducible Documents"
+  description: "A Quarto Tutorial for Scientific Communication on Quarto at SciPy 2024"
+
+  repo-url: https://github.com/mine-cetinkaya-rundel/quarto-scipy24
+  repo-actions: [edit, issue]
+
+  open-graph: true
+
+  sidebar:
+    background: "#D1D9E3"
+    logo: "images/quarto-scipy24-site-logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/mine-cetinkaya-rundel/quarto-scipy24
+        text: GitHub repo
+      - icon: code-square
+        href: https://code.visualstudio.com/
+        text: VS Code
+
+    style: docked
+    search: true
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: setup.qmd
+        text: Setup
+      - section: Part 1 - Single documents
+        contents:
+          - href: 1-1-hello/index.qmd
+            text: Hello
+          - href: 1-2-documents/index.qmd
+            text: Documents
+          - href: 1-3-presentations/index.qmd
+            text: Presentations
+          - href: 1-4-dashboards/index.qmd
+            text: Dashboards
+      - section: Part 2 - Multiple documents
+        contents:
+          - href: 2-1-websites/index.qmd
+            text: Websites and blogs
+          - href: 2-2-books/index.qmd
+            text: Books
+          - href: 2-3-manuscripts/index.qmd
+            text: Manuscripts
+
+  page-footer:
+    right: "This page is built with 💚 and [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2024, Mine Çetinkaya-Rundel"
+    background: "#D1D9E3" # Arylide Yellow
+
+format:
+  html:
+    theme:
+      light: [cosmo, style/quarto-scipy24.scss]
+      dark: [cosmo, style/quarto-scipy24.scss, style/dark.scss]
+    linkcolor: "#58779b"
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+
+execute:
+  freeze: auto
+  echo: true

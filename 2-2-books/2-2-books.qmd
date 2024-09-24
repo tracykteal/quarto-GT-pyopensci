@@ -1,0 +1,86 @@
+---
+title: "Books"
+subtitle: "SciPy 2024: Unlocking Dynamic Reproducible Documents<br>A Quarto Tutorial for Scientific Communication"
+author: "Mine Çetinkaya Rundel"
+institute: "Duke University + Posit PBC"
+footer: "🔗 [bit.ly/quarto-scipy24](https://bit.ly/quarto-scipy24)"
+format:
+  revealjs:
+    output-file: 2-2-books-reveal.html
+    transition: fade
+    slide-number: true
+    chalkboard: true
+    logo: ../images/quarto-scipy24-slide-logo.png
+    theme: ../style/slides.scss
+filters: 
+  - countdown
+execute:
+  freeze: auto
+  echo: true
+---
+
+# Anatomy of a Quarto book
+
+## Quarto books
+
+-   Books are also essentially `format: html` + a Quarto Project
+
+-   But a book is different than `format: html` in that it has multiple pages
+
+-   Books and websites are very similar in that they associate multiple pages/resources into a connected resource
+
+-   Books and websites are different in how they treat components: pages vs. cross-referencable chapters for website and books, respectively
+
+## Our turn
+
+::: our-turn
+Let's build a book together from some of the documents we've created so far and highlight the following features of Quarto websites:
+
+-   `_quarto.yml`
+
+-   `index.qmd` / landing page
+
+-   Cross references
+
+-   Sections
+
+-   Appendices
+:::
+
+## Your turn
+
+::: your-turn
+Pick up where we left off and
+
+-   Give a title to your book.
+-   Add a numbered figure and cross-reference it.
+-   Add a numbered figure to another chapter, cross-reference it, and observe the numbering scheme.
+:::
+
+{{< countdown minutes=10 >}}
+
+# Wrap up
+
+## Computations
+
+Same `freeze` and `cache` ideas for websites apply to books.
+
+## Publishing
+
+Same publishing options for websites apply to books as well.
+
+## Learn more
+
+::: {.center-align .large}
+[quarto.org/docs/books](https://quarto.org/docs/books/)
+:::
+
+```{=html}
+<iframe src="https://quarto.org/docs/books" width="100%" height="500" style="border:2px solid #123233;" title="Quarto Books"></iframe>
+```
+
+## Questions
+
+::: your-turn
+Any questions / anything you'd like to review before we wrap up this module?
+:::
