@@ -495,7 +495,7 @@
     "href": "1-2-documents/1-2-documents-reveal.html#tables-from-code-1",
     "title": "Documents",
     "section": "Tables from code",
-    "text": "Tables from code\nIf you want fancier tables, try the great_tables package and all that it offers!\n\n\nimport great_tables as gt\n\n(\n    gt.GT(penguins.head())\n    .tab_style(\n        style = [\n            gt.style.fill(color = \"pink\"),\n            gt.style.text(weight = \"italic\")\n        ],\n        locations = gt.loc.body(\n          columns= \"bill_length_mm\",\n          rows = lambda x: x[\"bill_length_mm\"] &gt; 40\n        )\n    )\n)\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\nAdelie\nTorgersen\n\n\n\n\n\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007"
+    "text": "Tables from code\nIf you want fancier tables, try the great_tables package and all that it offers!\n\n\nimport great_tables as gt\n\n(\n    gt.GT(penguins.head())\n    .tab_style(\n        style = [\n            gt.style.fill(color = \"pink\"),\n            gt.style.text(weight = \"italic\")\n        ],\n        locations = gt.loc.body(\n          columns= \"bill_length_mm\",\n          rows = lambda x: x[\"bill_length_mm\"] &gt; 40\n        )\n    )\n)\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\nAdelie\nTorgersen\n\n\n\n\n\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007"
   },
   {
     "objectID": "1-2-documents/1-2-documents-reveal.html#markdown-figures",
@@ -558,7 +558,7 @@
     "href": "1-2-documents/1-2-documents-reveal.html#table-cross-references",
     "title": "Documents",
     "section": "Table cross references",
-    "text": "Table cross references\nThe presence of the caption (A few penguins) and label (#tbl-penguins) make this table referenceable:\nMarkdown syntax:\nSee @tbl-penguins for data on a few penguins.\n\n```{python}\n#| label: tbl-penguins\n#| tbl-cap: A few penguins\ngt.GT(penguins.head())\n```\nOutput:\nSee Table 1 for data on a few penguins.\n\ngt.GT(penguins.head())\n\n\n\nTable 1: A few penguins\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\nAdelie\nTorgersen\n\n\n\n\n\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007"
+    "text": "Table cross references\nThe presence of the caption (A few penguins) and label (#tbl-penguins) make this table referenceable:\nMarkdown syntax:\nSee @tbl-penguins for data on a few penguins.\n\n```{python}\n#| label: tbl-penguins\n#| tbl-cap: A few penguins\ngt.GT(penguins.head())\n```\nOutput:\nSee Table 1 for data on a few penguins.\n\ngt.GT(penguins.head())\n\n\n\nTable 1: A few penguins\n\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\nAdelie\nTorgersen\n\n\n\n\n\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007"
   },
   {
     "objectID": "1-2-documents/1-2-documents-reveal.html#your-turn-3",
@@ -855,7 +855,7 @@
     "href": "1-4-dashboards/1-4-dashboards-reveal.html#dashboard-deployment",
     "title": "Dashboards",
     "section": "Dashboard Deployment",
-    "text": "Dashboard Deployment\nDashboards are typically just static HTML pages so can be deployed to any web server or web host.\n\n\n\n\n\n\n\nStatic\nRendered a single time (e.g. when underlying data won’t ever change)\n\n\nScheduled\nRendered on a schedule (e.g. via cron job) to accommodate changing data.\n\n\nParameterized\nVariations of static or scheduled dashboards based on parameters.\n\n\nInteractive\nFully interactive dashboard using Shiny (requires a server for deployment)."
+    "text": "Dashboard Deployment\nDashboards are typically just static HTML pages so can be deployed to any web server or web host.\n\n\n\n\n\n\n\n\nStatic\nRendered a single time (e.g. when underlying data won’t ever change)\n\n\nScheduled\nRendered on a schedule (e.g. via cron job) to accommodate changing data.\n\n\nParameterized\nVariations of static or scheduled dashboards based on parameters.\n\n\nInteractive\nFully interactive dashboard using Shiny (requires a server for deployment)."
   },
   {
     "objectID": "1-4-dashboards/1-4-dashboards-reveal.html#parameterized-dashboards",
@@ -1155,7 +1155,7 @@
     "href": "index.html",
     "title": "Unlocking Dynamic Reproducible Documents",
     "section": "",
-    "text": "🗓️ Date: July 8, 2024\n🕗 Time: 08:00 - 12:00 US/Pacific\n🏨 Location: Room 315",
+    "text": "🗓️ Date:TBA\n🕗 Time: 08:00 - 12:00 US/Pacific\n🏨 Location: online",
     "crumbs": [
       "Home"
     ]

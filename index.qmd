@@ -1,11 +1,11 @@
 ---
 title: Unlocking Dynamic Reproducible Documents
-subtitle: A Quarto Tutorial for Scientific Communication at SciPy 2024
+subtitle: A Quarto Tutorial for Scientific Communication at pyOpenSci Fall Festival 2024
 ---
 
-🗓️ Date: July 8, 2024\
+🗓️ Date:TBA\
 🕗 Time: 08:00 - 12:00 US/Pacific\
-🏨 Location: Room 315
+🏨 Location: online
 
 ## Abstract
 
