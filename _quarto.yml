@@ -4,8 +4,8 @@ project:
 
 website:
   page-navigation: true
-  title: "Unlocking Dynamic Reproducible Documents"
-  description: "A Quarto Tutorial for Scientific Communication on Quarto at SciPy 2024"
+  title: "Reproducible reports and presentations with Quarto and Great Tables"
+  description: "A Tutorial for pyOpenSci 2024"
 
   repo-url: https://github.com/mine-cetinkaya-rundel/quarto-scipy24
   repo-actions: [edit, issue]
