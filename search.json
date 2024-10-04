@@ -1150,9 +1150,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Unlocking Dynamic Reproducible Documents",
+    "title": "Reproducible reports and presentations with Quarto and Great Tables",
     "section": "",
-    "text": "🗓️ Date:TBA\n🕗 Time: 08:00 - 12:00 US/Pacific\n🏨 Location: online",
+    "text": "🗓️ Date November 1, 2024\n🕗 Time: 09:00am - 1:00pm US/Pacific\n🏨 Location: online",
     "crumbs": [
       "Home"
     ]
@@ -1160,7 +1160,7 @@
   {
     "objectID": "index.html#abstract",
     "href": "index.html#abstract",
-    "title": "Unlocking Dynamic Reproducible Documents",
+    "title": "Reproducible reports and presentations with Quarto and Great Tables",
     "section": "Abstract",
     "text": "Abstract\nQuarto is an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and plain text markdown documents. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is reproducible, accessible, and shareable. With Quarto, researchers can turn their Jupyter Notebooks and literate plain text markdown documents into professional-looking publications in various formats. This workshop will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality documents, slides, websites, scientific manuscripts, and other shareable artifacts.",
     "crumbs": [
@@ -1170,7 +1170,7 @@
   {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
-    "title": "Unlocking Dynamic Reproducible Documents",
+    "title": "Reproducible reports and presentations with Quarto and Great Tables",
     "section": "Overview",
     "text": "Overview\nSharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a broader audience, build upon existing work, and collaborate with others in their field. Quarto, an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and plain text markdown documents, provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible, shareable, and reproducible. With Quarto, researchers and data professionals can turn their notebooks into professional-looking publications in various formats, including web pages, books, slides, dashboards, and scientific manuscripts. This workshop will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality publications.\nThe learning outcomes for the workshop include:\n\nAuthor documents in plain text markdown or Jupyter notebooks with equations, citations, crossrefs, figure panels, callouts, and advanced layouts.\nLearn how to author content in IPython/Jupyter and the Quarto VS Code extension.\nLeverage Quarto for creating different types of publications, including webpages/blogs, slides, dashboards, books, websites, and scientific manuscripts.\nCustomize execution and content with a rich array of code cell options, filters, and extensions.\nHost websites and publications on platforms such as GitHub Pages, QuartoPub, and Netlify.",
     "crumbs": [
@@ -1180,7 +1180,7 @@
   {
     "objectID": "index.html#schedule",
     "href": "index.html#schedule",
-    "title": "Unlocking Dynamic Reproducible Documents",
+    "title": "Reproducible reports and presentations with Quarto and Great Tables",
     "section": "Schedule",
     "text": "Schedule\nTo be posted.",
     "crumbs": [
@@ -1190,7 +1190,7 @@
   {
     "objectID": "index.html#instructor",
     "href": "index.html#instructor",
-    "title": "Unlocking Dynamic Reproducible Documents",
+    "title": "Reproducible reports and presentations with Quarto and Great Tables",
     "section": "Instructor",
     "text": "Instructor\nMine Çetinkaya-Rundel is Professor of the Practice at Duke University and Developer Educator at Posit. Mine’s work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine is a Fellow of the ASA and Elected Member of the ISI as well as the winner of the 2021 Robert V. Hogg Award for For Excellence in Teaching Introductory Statistics.\n\n This work is licensed under a Creative Commons Attribution 4.0 International License.",
     "crumbs": [
