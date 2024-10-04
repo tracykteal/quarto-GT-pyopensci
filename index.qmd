@@ -3,7 +3,7 @@ title: Reproducible reports and presentations with Quarto and Great Tables
 subtitle: Tutorial at pyOpenSci Fall Festival 2024
 ---
 
-🗓️ Date November 1, 2024\
+🗓️  Da::e November 1, 2024\
 🕗 Time: 09:00am - 1:00pm US/Pacific\
 🏨 Location: online
 
