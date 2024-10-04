@@ -1,1 +1,1 @@
-Sitemap: https://tracykteal.github.io/quarto-great_tables-pyopensci/sitemap.xml
+Sitemap: https://tracykteal.github.io/quarto-GT-pyopensci/sitemap.xml

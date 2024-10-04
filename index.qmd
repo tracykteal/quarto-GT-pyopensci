@@ -1,10 +1,10 @@
 ---
-title: Unlocking Dynamic Reproducible Documents
-subtitle: A Quarto Tutorial for Scientific Communication at pyOpenSci Fall Festival 2024
+title: Reproducible reports and presentations with Quarto and Great Tables
+subtitle: Tutorial at pyOpenSci Fall Festival 2024
 ---
 
-🗓️ Date:TBA\
-🕗 Time: 08:00 - 12:00 US/Pacific\
+🗓️ Date November 1, 2024\
+🕗 Time: 09:00am - 1:00pm US/Pacific\
 🏨 Location: online
 
 ## Abstract

@@ -16,7 +16,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Hello"
     ]
   },
@@ -27,7 +27,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Hello"
     ]
   },
@@ -38,8 +38,41 @@
     "section": "Exercises",
     "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises.",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Hello"
+    ]
+  },
+  {
+    "objectID": "1-3-5-great-tables/index.html",
+    "href": "1-3-5-great-tables/index.html",
+    "title": "Great Tables",
+    "section": "",
+    "text": "Change to be about Great Tables",
+    "crumbs": [
+      "Single documents",
+      "Great tables with Great Tables"
+    ]
+  },
+  {
+    "objectID": "1-3-5-great-tables/index.html#slides",
+    "href": "1-3-5-great-tables/index.html#slides",
+    "title": "Great Tables",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen",
+    "crumbs": [
+      "Single documents",
+      "Great tables with Great Tables"
+    ]
+  },
+  {
+    "objectID": "1-3-5-great-tables/index.html#exercises",
+    "href": "1-3-5-great-tables/index.html#exercises",
+    "title": "Great Tables",
+    "section": "Exercises",
+    "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises.",
+    "crumbs": [
+      "Single documents",
+      "Great tables with Great Tables"
     ]
   },
   {
@@ -586,33 +619,21 @@
     "href": "2-1-websites/index.html",
     "title": "Websites and blogs",
     "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Part 2 - Multiple documents",
-      "Websites and blogs"
-    ]
+    "text": "View slides in full screen"
   },
   {
     "objectID": "2-1-websites/index.html#slides",
     "href": "2-1-websites/index.html#slides",
     "title": "Websites and blogs",
     "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Part 2 - Multiple documents",
-      "Websites and blogs"
-    ]
+    "text": "View slides in full screen"
   },
   {
     "objectID": "2-1-websites/index.html#exercises",
     "href": "2-1-websites/index.html#exercises",
     "title": "Websites and blogs",
     "section": "Exercises",
-    "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises.",
-    "crumbs": [
-      "Part 2 - Multiple documents",
-      "Websites and blogs"
-    ]
+    "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises."
   },
   {
     "objectID": "1-3-presentations/1-3-presentations-reveal.html#components",
@@ -719,7 +740,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Dashboards"
     ]
   },
@@ -730,7 +751,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Dashboards"
     ]
   },
@@ -741,7 +762,7 @@
     "section": "Exercises",
     "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises.",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Dashboards"
     ]
   },
@@ -897,33 +918,21 @@
     "href": "2-2-books/index.html",
     "title": "Books",
     "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Part 2 - Multiple documents",
-      "Books"
-    ]
+    "text": "View slides in full screen"
   },
   {
     "objectID": "2-2-books/index.html#slides",
     "href": "2-2-books/index.html#slides",
     "title": "Books",
     "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Part 2 - Multiple documents",
-      "Books"
-    ]
+    "text": "View slides in full screen"
   },
   {
     "objectID": "2-2-books/index.html#exercises",
     "href": "2-2-books/index.html#exercises",
     "title": "Books",
     "section": "Exercises",
-    "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises.",
-    "crumbs": [
-      "Part 2 - Multiple documents",
-      "Books"
-    ]
+    "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises."
   },
   {
     "objectID": "1-3-presentations/index.html",
@@ -932,7 +941,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Presentations"
     ]
   },
@@ -943,7 +952,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Presentations"
     ]
   },
@@ -954,7 +963,7 @@
     "section": "Exercises",
     "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises.",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Presentations"
     ]
   },
@@ -1091,7 +1100,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Documents"
     ]
   },
@@ -1102,7 +1111,7 @@
     "section": "",
     "text": "View slides in full screen",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Documents"
     ]
   },
@@ -1113,7 +1122,7 @@
     "section": "Exercises",
     "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises.",
     "crumbs": [
-      "Part 1 - Single documents",
+      "Single documents",
       "Documents"
     ]
   },
@@ -1122,33 +1131,21 @@
     "href": "2-3-manuscripts/index.html",
     "title": "Manuscripts",
     "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Part 2 - Multiple documents",
-      "Manuscripts"
-    ]
+    "text": "View slides in full screen"
   },
   {
     "objectID": "2-3-manuscripts/index.html#slides",
     "href": "2-3-manuscripts/index.html#slides",
     "title": "Manuscripts",
     "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Part 2 - Multiple documents",
-      "Manuscripts"
-    ]
+    "text": "View slides in full screen"
   },
   {
     "objectID": "2-3-manuscripts/index.html#exercises",
     "href": "2-3-manuscripts/index.html#exercises",
     "title": "Manuscripts",
     "section": "Exercises",
-    "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises.",
-    "crumbs": [
-      "Part 2 - Multiple documents",
-      "Manuscripts"
-    ]
+    "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises."
   },
   {
     "objectID": "index.html",
@@ -1199,6 +1196,55 @@
     "crumbs": [
       "Home"
     ]
+  },
+  {
+    "objectID": "1-3-5-great-tables/1-3-presentations-reveal.html#components",
+    "href": "1-3-5-great-tables/1-3-presentations-reveal.html#components",
+    "title": "Presentations",
+    "section": "Components",
+    "text": "Components\n\nMetadata: YAML\nText: Markdown\nCode: Executed via jupyter (or knitr)\n\n\nWeave it all together, and you have a beautiful, functional slide deck!"
+  },
+  {
+    "objectID": "1-3-5-great-tables/1-3-presentations-reveal.html#our-turn",
+    "href": "1-3-5-great-tables/1-3-presentations-reveal.html#our-turn",
+    "title": "Presentations",
+    "section": "Our turn",
+    "text": "Our turn\n\nLet’s build a presentation together from hello-penguins-slides.qmd and showcase the following features of Quarto presentations:\n\nHierarchy, headers, and document outline\nIncremental lists\nColumns\nCode, output location, code highlighting\nLogo and footer\nMaking things fit on a slide\nChalkboard\nMultiplex\nPublishing your presentation to Quarto Pub"
+  },
+  {
+    "objectID": "1-3-5-great-tables/1-3-presentations-reveal.html#your-turn",
+    "href": "1-3-5-great-tables/1-3-presentations-reveal.html#your-turn",
+    "title": "Presentations",
+    "section": "Your turn",
+    "text": "Your turn\n\nPick up where we left off and\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\n\n\n\n  \n    −\n    +\n \n 05:00"
+  },
+  {
+    "objectID": "1-3-5-great-tables/1-3-presentations-reveal.html#our-turn-1",
+    "href": "1-3-5-great-tables/1-3-presentations-reveal.html#our-turn-1",
+    "title": "Presentations",
+    "section": "Our turn",
+    "text": "Our turn\n\nLet’s continue building our a presentation together from hello-penguins-slides.qmd and showcase the fragments with .fragment and fragment-index=n."
+  },
+  {
+    "objectID": "1-3-5-great-tables/1-3-presentations-reveal.html#quarto-presentation-formats",
+    "href": "1-3-5-great-tables/1-3-presentations-reveal.html#quarto-presentation-formats",
+    "title": "Presentations",
+    "section": "Quarto presentation formats",
+    "text": "Quarto presentation formats\n\nrevealjs - essentially the replacement for xaringan, but with Pandoc-native syntax\nbeamer for LaTeX slides\nPowerPoint for when you have to collaborate via MS Office"
+  },
+  {
+    "objectID": "1-3-5-great-tables/1-3-presentations-reveal.html#learn-more",
+    "href": "1-3-5-great-tables/1-3-presentations-reveal.html#learn-more",
+    "title": "Presentations",
+    "section": "Learn more",
+    "text": "Learn more\n\nquarto.org/docs/presentations"
+  },
+  {
+    "objectID": "1-3-5-great-tables/1-3-presentations-reveal.html#questions",
+    "href": "1-3-5-great-tables/1-3-presentations-reveal.html#questions",
+    "title": "Presentations",
+    "section": "Questions",
+    "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?\n\n\n\n\n\n🔗 bit.ly/quarto-scipy24"
   },
   {
     "objectID": "1-1-hello/1-1-hello-reveal.html#setup",
