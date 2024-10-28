@@ -1,0 +1,657 @@
+---
+title: "Formatting Data"
+format: html
+html-table-processing: none
+jupyter: python3
+---
+
+## Intro
+
+Columns of data can be formatted with the `fmt_*()` methods. We can specify the rows of these columns quite precisely with the `rows` argument. We get to apply these methods exactly once to each data cell (last call wins). Need to do custom formatting? Use the `fmt()` method and define your own formatting function (or, create a wrapper with `fmt()` if you prefer).
+
+------
+
+### Methods in this module
+
+- `fmt_number()`
+- `fmt_integer()`
+- `fmt_scientific()`
+- `fmt_percent()`
+- `fmt_currency()`
+- `fmt_date()`
+- `fmt_time()`
+- `fmt_datetime()`
+- `fmt_markdown()`
+- `sub_missing()`
+- `data_color()`
+- `text_transform()`
+
+------
+
+
+### `fmt_number()`: Format numeric values
+
+```python
+fmt_number(
+  data,
+  columns = None,
+  rows = None,
+  decimals = 2,
+  n_sigfig = None,
+  drop_trailing_zeros = False,
+  drop_trailing_dec_mark = True,
+  use_seps = True,
+  accounting = False,
+  scale_by = 1,
+  compact = False,
+  pattern = "{x}",
+  sep_mark = ",",
+  dec_mark = ".",
+  force_sign = False,
+  locale = None
+)
+```
+
+With numeric values in a GT table, we can perform number-based formatting so that the targeted values are rendered with a higher consideration for tabular presentation.
+
+We get a lot of control over numeric formatting with the following options:
+
+- decimals: choice of the number of decimal places, option to drop trailing zeros, and a choice of the decimal symbol
+
+- digit grouping separators: options to enable/disable digit separators and provide a choice of separator symbol
+
+- scaling: we can choose to scale targeted values by a multiplier value
+
+- compact numbers: larger figures (thousands, millions, etc.) can be autoscaled and decorated with the appropriate suffixes
+
+- pattern: option to use a text pattern for decoration of the formatted values
+
+- locale-based formatting: providing a locale ID (e.g., `"de"`) will result in number formatting specific to the chosen locale
+
+##### EXAMPLES
+
+Use `exibble` to create a GT table. Format the `num` column using `fmt_number()` and its default options.
+
+```{python}
+from great_tables import GT
+from great_tables.data import exibble
+
+(
+  GT(exibble[["num", "char"]])
+  .fmt_number(columns="num")
+)
+```
+
+Let's format the `num` column as numeric with three decimal places. Don't use digit separators (`use_seps = False`).
+
+```{python}
+
+(
+  GT(exibble[["num"]])
+  .fmt_number(
+    decimals=3,
+    use_seps=False
+  )
+)
+```
+
+
+Format only the first three rows of `num`, this time with 4 decimal places.
+
+```{python}
+
+(
+  GT(exibble[["num"]])
+  .fmt_number(
+    rows=[0, 1, 2],
+    decimals=4
+  )
+)
+```
+
+
+Format only the rows of `num` (to 4 decimal places) where values in `currency` are greater than 30.
+
+```{python}
+
+(
+  GT(exibble[["num", "currency"]])
+  .fmt_number(
+    columns="num",
+    rows=lambda x: x["currency"] > 30,
+    decimals=4
+  )
+)
+```
+
+
+Combine the conditional selection of rows with scaling values by 1/1000 and then putting a `"K"` after the scaled values (with a `pattern`).
+
+```{python}
+
+(
+  GT(exibble[["num"]])
+  .fmt_number(
+    columns="num",
+    rows=lambda x: x["num"] > 500,
+    decimals=1,
+    scale_by=1/1000,
+    pattern="{x}K"
+  )
+)
+```
+
+Use `countrypops` to create a GT table. Format all numeric columns to use a compact representation (with `compact=True`).
+
+```{python}
+from great_tables.data import countrypops
+import polars as pl
+
+countrypops_mini = (
+    pl.from_pandas(countrypops)
+    .select("country_code_3", "year", "population")
+    .filter(pl.col("country_code_3").is_in(["CHN", "IND", "USA", "PAK", "IDN"]))
+    .filter((pl.col("year") % 5 == 0) & (pl.col("year") >= 1980))
+    .pivot("year", index = "country_code_3")
+)
+
+(
+  GT(countrypops_mini, rowname_col="country_code_3")
+  .fmt_number(
+    decimals=2,
+    compact=True
+  )
+)
+```
+
+With `exibble`, make a simple GT table. Format the `num` column as numeric with three decimal places and do this formatting according to the `"fr"` locale.
+
+```{python}
+
+(
+  GT(exibble[["num"]])
+  .fmt_number(
+    columns="num",
+    decimals=3,
+    locale="fr" # <- "fr_FR", "fr_CA", "de", "de_AT"
+  )
+)
+```
+
+------
+
+### `fmt_integer()`: Format values as integers
+
+```python
+fmt_integer(
+  data,
+  columns = None,
+  rows = None,
+  use_seps = True,
+  accounting = False,
+  scale_by = 1,
+  compact = False,
+  pattern = "{x}",
+  sep_mark = ",",
+  force_sign = False,
+  locale = None
+)
+```
+
+With numeric values in a GT table, we can perform number-based formatting so that the targeted values are always rendered as integer values.
+
+##### EXAMPLE
+
+Use `exibble` to create a GT table. Format the `num` column using `fmt_integer()` and its default options.
+
+```{python}
+(
+  GT(exibble[["num"]])
+  .fmt_integer(columns="num")
+)
+```
+
+
+------
+
+### `fmt_scientific()`: Format values to scientific notation
+
+```python
+fmt_scientific(
+  data,
+  columns = None,
+  rows = None,
+  decimals = 2,
+  drop_trailing_zeros = False,
+  scale_by = 1,
+  exp_style = "x10n",
+  pattern = "{x}",
+  sep_mark = ",",
+  dec_mark = ".",
+  force_sign_m = False,
+  force_sign_n = False,
+  locale = None
+)
+```
+
+With numeric values in a GT table, we can perform formatting so that the targeted values are rendered in scientific notation.
+
+##### EXAMPLE
+
+Use `exibble` to create a GT table. Format the `num` column as partially in scientific notation (values <=500).
+
+```{python}
+
+(
+  GT(exibble[["num", "currency"]])
+  .fmt_scientific(
+    columns="num",
+    rows=lambda x: x["num"] <= 500,
+    decimals=1
+  )
+)
+```
+
+
+------
+
+### `fmt_percent()`: Format values as a percentage
+
+```python
+fmt_percent(
+  data,
+  columns = None,
+  rows = None,
+  decimals = 2,
+  drop_trailing_zeros = False,
+  drop_trailing_dec_mark = True,
+  scale_values = True,
+  use_seps = True,
+  accounting = False,
+  pattern = "{x}",
+  sep_mark = ",",
+  dec_mark = ".",
+  force_sign = False,
+  incl_space = False,
+  placement = "right",
+  locale = None
+)
+```
+
+With numeric values in a GT table, we can perform percentage-based formatting. It is assumed the input numeric values are in a fractional format since the numbers will be automatically multiplied by `100` before decorating with a percent sign. For the other scenario, where values just need a percent sign, use `scale_values = False`.
+
+##### EXAMPLE
+
+Create a simple GT table. Format the `b` column to display values as percentages.
+
+```{python}
+pl_df = pl.DataFrame({"a": [0, 1, 2, 3], "b": [0.02, 0.64, 0.973, 0.5]})
+
+GT(pl_df).fmt_percent(columns="b", decimals=1)
+```
+
+------
+
+### `fmt_currency()`: Format values as currencies
+
+```python
+fmt_currency(
+  data,
+  columns = None,
+  rows = None,
+  currency = "USD",
+  use_subunits = True,
+  decimals = None,
+  drop_trailing_dec_mark = True,
+  use_seps = True,
+  accounting = False,
+  scale_by = 1,
+  compact = False,
+  pattern = "{x}",
+  sep_mark = ",",
+  dec_mark = ".",
+  force_sign = False,
+  placement = "left",
+  incl_space = False,
+  locale = None
+)
+```
+
+With numeric values in a GT table, we can perform currency-based formatting. This method supports automatic formatting of currencies with a three-letter currency code. Numeric formatting facilitated through the use of a locale ID.
+
+##### EXAMPLES
+
+Use one column of the `exibble` dataset to create a GT table. Format the `currency` column to have currency values in euros (`EUR`).
+
+```{python}
+
+(
+  GT(exibble[["currency"]])
+  .fmt_currency(columns="currency", currency="EUR")
+)
+```
+
+
+Use `exibble` to create a GT table. Keep only the `num` and `currency`, columns, then, format those columns using the `JPY` and `GBP` currencies.
+
+```{python}
+
+(
+  GT(exibble[["num", "currency"]])
+  .fmt_currency(columns="num", currency="JPY")
+  .fmt_currency(columns="currency", currency="GBP")
+)
+```
+
+------
+
+### `fmt_date()`: Format values as dates
+
+```python
+fmt_date(
+  data,
+  columns = None,
+  rows = None,
+  date_style = "iso",
+  pattern = "{x}",
+  locale = None
+)
+```
+
+Format input date values that are either of the `Date` type, or, are character-based and expressed according to the ISO 8601 date format (`YYYY-MM-DD`). Once the appropriate data cells are targeted with columns (and, optionally, rows), we can simply apply a preset date style (see table in `info_date_style()` for info) to format the dates.
+
+##### EXAMPLES
+
+Use `exibble` to create a GT table. Keep only the `date` and `time` columns. Format the `date` column to have dates formatted as `month_day_year` (date style `5`).
+
+```{python}
+
+(
+  GT(exibble[["date", "time"]])
+  .fmt_date(columns="date", date_style="month_day_year")
+)
+```
+
+Use `exibble` to create a GT table. keep only the `date` and `time` columns. Format the `date` column to have mixed date formats (dates after April will be different than the others).
+
+```{python}
+
+(
+  GT(pl.from_pandas(exibble).select(["date", "time"]))
+  .fmt_date(
+    columns="date",
+    rows=pl.col("date").str.to_date() > pl.date(2015, 4, 1),
+    date_style="m_day_year"
+  )
+  .fmt_date(
+    columns="date",
+    rows=pl.col("date").str.to_date() <= pl.date(2015, 4, 1),
+    date_style="day_m_year"
+  )
+)
+```
+
+------
+
+### `fmt_time()`: Format values as times
+
+```python
+fmt_time(
+  data,
+  columns = None,
+  rows = None,
+  time_style = "iso",
+  pattern = "{x}",
+  locale = None
+)
+```
+
+Format input time values that are character-based and expressed according to the ISO 8601 time format (`HH:MM:SS`). Once the appropriate data cells are targeted with columns (and, optionally, rows), we can simply apply a preset time style (see table in `info_time_style()` for info) to format the times.
+
+##### EXAMPLES
+
+Use `exibble` to create a GT table. Keep only the `date` and `time` columns. Format the `time` column to have times formatted as `"h_m_s_p"`.
+
+```{python}
+
+(
+  GT(exibble[["date", "time"]])
+  .fmt_time(columns="time", time_style="h_m_s_p")
+)
+```
+
+
+Use `exibble` to create a GT table. Keep only the `date` and `time` columns. Format the `time` column to have mixed time formats (times after 16:00 will be different than the others).
+
+```{python}
+
+(
+  GT(pl.from_pandas(exibble).select(["date", "time"]))
+  .fmt_time(
+    columns="time",
+    rows=pl.col("time") > "16:00",
+    time_style="h_m_s_p"
+  )
+  .fmt_time(
+    columns="time",
+    rows=pl.col("time") <= "16:00",
+    time_style="h_m_p"
+  )
+)
+```
+
+------
+
+### `fmt_datetime()`: Format values as date-times
+
+```python
+fmt_datetime(
+  data,
+  columns = None,
+  rows = None,
+  date_style = "iso",
+  time_style = "iso",
+  sep = " ",
+  pattern = "{x}",
+  locale = None
+)
+```
+
+Format input date-time values that are character-based and expressed according to the ISO 8601 date-time format (`YYYY-MM-DD HH:MM:SS`). Once the appropriate data cells are targeted with columns (and, optionally, rows), we can simply apply preset date and time styles to format the data-time values.
+
+##### EXAMPLE
+
+Use `exibble` to create a GT table. keep only the `datetime` column. Format the column to have dates formatted as `month_day_year` and times to be `"h_m_s_p"`.
+
+```{python}
+
+(
+  GT(exibble[["datetime"]])
+  .fmt_datetime(
+    columns="datetime",
+    date_style="month_day_year",
+    time_style="h_m_s_p"
+  )
+)
+```
+
+
+------
+
+### `fmt_markdown()`: Format Markdown text
+
+```python
+fmt_markdown(
+  data,
+  columns,
+  rows = None
+)
+```
+
+Any Markdown-formatted text in the incoming cells will be transformed to the appropriate output type during render when using `fmt_markdown()`.
+
+##### EXAMPLE
+
+Create a few Markdown-based text snippets.
+
+```{python}
+text_1a = """"### This is Markdown.
+
+Markdown’s syntax is comprised entirely of
+punctuation characters, which punctuation
+characters have been carefully chosen so as
+to look like what they mean... assuming
+you’ve ever used email."""
+
+text_1b = """Info on Markdown syntax can be found
+[here](https://daringfireball.net/projects/markdown/)."""
+
+text_2a = """
+The Great Tables package includes these datasets:
+
+ - `countrypops`
+ - `sza`
+ - `gtcars`
+ - `sp500`
+ - `pizzaplace`
+ - `exibble`
+"""
+
+text_2b = """There's a quick reference [here](https://commonmark.org/help/)."""
+```
+
+Arrange the text snippets into a DataFrame. Then, create a GT table and format all columns with `fmt_markdown()`.
+
+```{python}
+
+pl_df = pl.DataFrame(
+  {
+    "Markdown_1": [text_1a, text_1b],
+    "Markdown_2": [text_2a, text_2b]
+  }
+)
+
+(
+  GT(pl_df)
+  .fmt_markdown(columns=["Markdown_1", "Markdown_2"])
+  .tab_options(table_width = "400px")
+)
+```
+
+------
+
+### `sub_missing()`: Format missing values
+
+```python
+sub_missing(
+  data,
+  columns = None,
+  rows = None,
+  missing_text = None
+)
+```
+
+Wherever there is missing data (i.e., `None` values) a customized mark may present better than the standard `"None"` text that would otherwise appear. The `sub_missing()` method allows for this replacement through its `missing_text` argument.
+
+##### EXAMPLE
+
+Use `exibble` to create a GT table. The `None` values in different columns will be given replacement text.
+
+```{python}
+
+exibble_mini = (
+  pl.from_pandas(exibble).drop(["row", "group"])
+)
+
+(
+  GT(exibble_mini)
+  .sub_missing(
+    columns=["num", "char"],
+    missing_text="missing"
+  )
+  .sub_missing(
+    columns=["fctr", "date", "time", "datetime", "currency"],
+    missing_text="nothing"
+  )
+) 
+```
+
+------
+
+### `data_color()`: Set data cell colors using a palette
+
+```python
+data_color(
+  data,
+  columns = None,
+  rows = None,
+  palette = None,
+  domain = None,
+  na_color = None,
+  alpha = None,
+  reverse = False,
+  autocolor_text = True
+)
+```
+
+It's possible to add color to data cells according to their values. The `data_color()` method colors all `rows` of any `columns` supplied.
+
+##### EXAMPLES
+
+Use `countrypops` to create a GT table. Apply a color scale to the `population` column with `method = "numeric"`, four supplied colors in `palette`, and a `domain` range (two-element vector).
+
+```{python}
+
+countrypops_mini = (
+  pl.from_pandas(countrypops)
+  .filter(pl.col("country_name") == "Mongolia")
+  .drop(["country_code_2", "country_code_3"])
+  .tail(10)
+)
+
+(
+  GT(countrypops_mini)
+  .data_color(
+    columns = "population",
+    palette = ["red", "orange", "green", "blue"],
+    domain = [2e6, 4e6]
+  )
+)
+```
+
+Use `pizzaplace` to create a GT table. Apply colors to the `sold` and `income` columns. Keep the `domain` as `None` to use the bounds of the available data as the domain.
+
+```{python}
+from great_tables.data import pizzaplace
+
+pizzaplace_mini = (
+  pl.from_pandas(pizzaplace)
+  .filter(pl.col("type").is_in(["chicken", "supreme"]))
+  .group_by(["type", "size"])
+  .agg(
+    sold=pl.len(),
+    income=pl.sum("price")
+  )
+  .sort(["type", "size"])
+)
+
+(
+  GT(pizzaplace_mini, rowname_col="size")
+  .fmt_currency(columns="income")
+  .data_color(
+    columns = ["sold", "income"],
+    palette = ["red", "white"]
+  )
+)
+```
+
+
+### SUMMARY
+
+1. Numbers can be formatted with `fmt_number()`, values in scientific notation with `fmt_scientific()`, percentages with `fmt_percent()`, and currency values with `fmt_currency()`.
+2. Options for these number-based formats include: specification of separators, formatting according to a given locale, scaling values, applying a pattern, etc.
+3. Dates, times, and date-times can be formatted to numbered styles with `fmt_date()`, `fmt_time()`, and `fmt_datetime()`. 
+4. Markdown text can be transformed using `fmt_markdown()`.
+5. Missing values (i.e., `NA` values) can be substituted with text by using `sub_missing()`.
+6. Cells can be colored according to their values with `data_color()`
+
