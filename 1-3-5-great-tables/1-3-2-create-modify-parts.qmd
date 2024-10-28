@@ -1,0 +1,401 @@
+---
+title: "Adding or Modifying Parts of a Table"
+format: html
+html-table-processing: none
+jupyter: python3
+---
+
+## Intro
+
+A GT table can contain a few useful parts for conveying additional information. These include a header (with a titles and subtitle), a footer (with source notes), and additional areas for labels (row group labels, column spanner labels, the stubhead label). We can modify the look of table parts more generally with `tab_options()` and perform styling on targeted table locations with `tab_style()`.
+
+------
+
+### Methods in this module
+
+- `tab_header()`
+- `tab_stubhead()`
+- `tab_spanner()`
+- `tab_source_note()`
+- `tab_style()`
+- `tab_options()`
+
+Helpers for transforming text:
+
+- `md()`
+- `html()`
+
+Helpers for targeting locations (for `tab_style()`):
+
+- `loc`
+- `style`
+
+------
+
+### `tab_header()`: Add a table header
+
+```python
+tab_header(
+  data,
+  title,
+  subtitle = None
+)
+```
+
+We can add a table header to the GT table with a title and optionally a subtitle. A table header is an optional table part that is positioned above the column labels. We have the flexibility to use Markdown or HTML formatting for the header's title and subtitle (with `md()` or `html()`).
+
+##### EXAMPLE
+
+Use `gtcars` to create a GT table; add a header part to contain a `title` and `subtitle`.
+
+```{python}
+from great_tables import GT, md
+from great_tables.data import exibble, gtcars
+import polars as pl
+
+gtcars_mini = (
+  pl.from_pandas(gtcars)
+  .select(["mfr", "model", "msrp"])
+  .head(5)
+)
+
+(
+  GT(gtcars_mini)
+  .tab_header(
+    title=md("Data listing from **gtcars**"),
+    subtitle=md("`gtcars` is an R dataset")
+  )
+)
+```
+
+------
+
+### `tab_stubhead()`: Add label text to the stubhead
+
+```python
+tab_stubhead(
+  data,
+  label
+)
+```
+
+Add a label to the stubhead of a GT table. The stubhead is the lone element that is positioned left of the column labels, and above the stub. We have the flexibility to use Markdown formatting for the stubhead label with `md()`. Furthermore, if the table is intended for HTML output, we can use HTML for the stubhead label (with `html()`).
+
+##### EXAMPLE
+
+Use `gtcars` to create a GT table. Add a stubhead label to describe what is in the stub.
+
+```{python}
+
+gtcars_mini = (
+  pl.from_pandas(gtcars)
+  .select(["model", "year", "hp", "trq"])
+  .head(5)
+)
+
+(
+  GT(gtcars_mini, rowname_col="model")
+  .tab_stubhead(label="car")
+)
+```
+
+------
+
+### `tab_spanner()`: Add a spanner column label
+
+```python
+tab_spanner(
+  data,
+  label,
+  columns = None,
+  spanners = None,
+  level = None,
+  id = label,
+  gather = True,
+  replace = False
+)
+```
+
+Set a spanner column label by mapping it to columns already in the table. This label is placed above one or more column labels, spanning the width of those columns and column labels.
+
+##### EXAMPLES
+
+Let's use the `gtcars` table, but cut it down to size first:
+
+```{python}
+
+gtcars_small = (
+  pl.from_pandas(gtcars)
+  .select([
+    "model", "year", "bdy_style", "hp", "hp_rpm",
+    "trq", "trq_rpm", "mpg_c", "mpg_h", "msrp"
+  ])
+  .head(5)
+)
+
+gtcars_small
+```
+
+Let's look at the table in GT so that we know where we are starting from.
+
+```{python}
+GT(gtcars_small, rowname_col="model")
+```
+
+Use `gtcars` to create a GT table; Group several columns related to car performance under a spanner column with the label `performance`.
+
+```{python}
+(
+  GT(gtcars_small, rowname_col = "model")
+  .tab_spanner(
+    label="performance",
+    columns=["hp", "hp_rpm", "trq", "trq_rpm", "mpg_c", "mpg_h"]
+  )
+)
+```
+
+With a few Polars selectors statements, we can get the same columns.
+
+```{python}
+import polars.selectors as cs
+
+(
+  GT(gtcars_small, rowname_col = "model")
+  .tab_spanner(
+    label="performance",
+    columns=[
+      cs.starts_with("hp"),
+      cs.starts_with("trq"),
+      cs.starts_with("mpg")
+    ]
+  )
+)
+```
+
+------
+
+### `tab_source_note()`: Add a source note citation
+
+```python
+tab_source_note(
+  data,
+  source_note
+)
+```
+
+We can add a source note to the footer part of any GT table. A source note is useful for citing the data included in the table. Several can be added, simply use multiple calls of `tab_source_note()` and they will be inserted in the order provided. We can use Markdown formatting for the note, or, if the table is intended for HTML output, we can include HTML formatting.
+
+##### EXAMPLE
+
+Use `exibble` to create a GT table. Add a source note to the table footer that cites the data source.
+
+```{python}
+(
+  GT(exibble)
+  .tab_source_note(
+    source_note="The exibble dataset is available in the Great Tables package."
+  )
+)
+```
+
+------
+
+### `tab_style()`: Add custom styles to one or more cells
+
+```python
+tab_style(
+  data,
+  style,
+  locations
+)
+```
+
+With the `tab_style()` method we can target specific cells and apply styles to them. 
+
+This is done with the help of the following style module and its methods:
+
+- `style.fill()`
+- `style.text()`
+- `style.borders()`
+
+For `locations` we use the `loc` methods. In the example below, we'll use `loc.body()` along with a conditional statement in `rows=` to target cells based on data.
+
+##### EXAMPLES
+
+Change the font of all body cells in the `exibble` table to `Times New Roman`. By default, using `cells_body()` without any arguments means all table body cells are targeted.
+
+```{python}
+from great_tables import loc, style
+
+exibble_mini = (
+  pl.from_pandas(exibble)
+  .select(["num", "currency"])
+)
+
+(
+  GT(exibble_mini)
+  .tab_style(
+    style=style.text(font="Times New Roman"),
+    locations=loc.body()
+  )
+)
+```
+
+Use a font from the Google Fonts service by using the `google_font()` method. Recommendations on some Google fonts can be found by using `info_google_fonts()`.
+
+```{python}
+from great_tables import google_font
+
+(
+  GT(exibble_mini)
+  .fmt_currency(columns="currency", currency="EUR")
+  .tab_style(
+    style=style.text(font=google_font("IBM Plex Sans"), weight=500),
+    locations=loc.body()
+  )
+)
+```
+
+Use `exibble` to create a GT table. Add styles that are to be applied to data cells that satisfy a condition (using `tab_style()`).
+
+```{python}
+
+(
+  GT(exibble_mini)
+  .fmt_number(columns=["num", "currency"])
+  .tab_style(
+    style=[
+      style.fill(color="cyan"),
+      style.text(weight="bold")
+    ],
+    locations=loc.body(
+      columns="num",
+      rows=pl.col("num") > 5000
+    )
+  )
+  .tab_style(
+    style=[
+      style.fill(color="#F9E3D6"),
+      style.text(style="italic")
+    ],
+    locations=loc.body(
+      columns="currency",
+      rows=pl.col("currency") < 100
+    )
+  )
+)
+```
+
+Use `sp500` to create a GT table. Color entire rows of cells based on values in a particular column.
+
+```{python}
+from great_tables.data import sp500
+
+sp500_mini = (
+  pl.from_pandas(sp500)
+  .filter(pl.col("date") >= "2015-12-01")
+  .filter(pl.col("date") <= "2015-12-15")
+  .drop(["adj_close", "volume"])
+)
+
+(
+  GT(sp500_mini)
+  .tab_style(
+    style = style.fill(color="lightgreen"),
+    locations = loc.body(
+      rows = pl.col("close") > pl.col("open")
+    )
+  )
+  .tab_style(
+    style = [
+      style.fill(color="tomato"),
+      style.text(color="white")
+    ],
+    locations = loc.body(
+      rows = pl.col("open") > pl.col("close")
+    )
+  )
+)
+```
+
+------
+
+### `tab_options()`: Modify the table output options
+
+```python
+tab_options(
+  data,
+  <many options>
+)
+```
+
+With `tab_options()` we can modify the global options for a GT table. These options are named by the components, the sub-components, and the element that can adjusted. This method has a very large set of arguments and many aspects of the table can be adjusted. Later on, we'll take a look at some shortcuts to common options with the `opt_*()` methods.
+
+##### EXAMPLES
+
+Use `exibble` to create a GT table with all the main parts added; we can use this going forward to demo some `tab_options()`.
+
+```{python}
+
+exibble_small = (
+  pl.from_pandas(exibble)
+  .drop(["fctr", "date", "time", "datetime"])
+)
+
+tab_1 = (
+  GT(
+    exibble_small,
+    rowname_col = "row",
+    groupname_col = "group"
+  )
+  .tab_header(
+    title=md("Data listing from **exibble**"),
+    subtitle=md("`exibble` is an R dataset")
+  )
+  .fmt_number(columns="num")
+  .fmt_currency(columns="currency")
+  .tab_source_note(
+    source_note="Using commas for separators."
+  )
+)
+
+tab_1
+```
+
+Modify the table width (with `table_width`) to `100%` (which spans the entire content width area).
+
+```{python}
+tab_1.tab_options(table_width = "100%") 
+```
+
+Modify the table's background color (with `table_background_color`) to be `"lightcyan"`.
+
+```{python}
+tab_1.tab_options(table_background_color = "lightcyan")
+```
+
+Change the padding of data rows to `5px` with `data_row.padding`.
+
+```{python}
+tab_1.tab_options(data_row_padding = "5px")
+```
+
+Reduce the size of the title and the subtitle text (with `heading_title_font_size` and `heading_subtitle_font_size`).
+
+```{python}
+tab_1.tab_options(
+    heading_title_font_size="small",
+    heading_subtitle_font_size="small"
+  )
+```
+
+------
+
+### SUMMARY
+
+1. A header can be added to a GT table with `tab_header()`; use `md()` to style title/subtitle.
+2. Source notes can be added to the footer of a table with `tab_source_note()`.
+3. Spanner column labels can be placed above selected column labels with `tab_spanner()`.
+4. If you have a stub and want a label above it, use `tab_stubhead()`.
+5. The `tab_style()` method helps to style specified cells; use both the `loc()` and `style` modules for targeting and style specification. 
+6. Tons of options that affect the entire table (i.e., not targeted) can be used with `tab_options()`.
