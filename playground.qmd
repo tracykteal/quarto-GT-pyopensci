@@ -1,0 +1,20 @@
+---
+format: html
+---
+
+# Playground file for Quarto and Great Tables workshop
+
+### Install some Python packages
+
+```{python}
+!pip install great_tables
+!pip install polars
+!pip install pandas
+!pip install selenium
+```
+
+### Write some code
+
+```{python}
+1+1
+```
