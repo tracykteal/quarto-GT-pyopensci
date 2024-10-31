@@ -1,15 +1,24 @@
-# quarto-great_tables-pyopensci
+# Quarto and Great Tables workshop
 
 Materials for pyOpenSci Fall Festival workshop
 
 ## Info
 
-🗓️ Date:TBA
-🕗 Time: 08:00 - 12:00 US/Pacific  
+🗓️ Date:November 1, 2024
+🕗 Time: 08:00 - 1:00 US/Pacific  
 🏨 Location: online
 
 ## Abstract
 
-Quarto is an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and plain text markdown documents. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is reproducible, accessible, and shareable. With Quarto, researchers can turn their Jupyter Notebooks and literate plain text markdown documents into professional-looking publications in various formats. This workshop will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality documents, slides, websites, scientific manuscripts, and other shareable artifacts.
+If you want to use data to make decisions, answer scientific questions, inform people on issues or participate in data-driven journalism, just conducting the data analysis is not enough. Effective communication requires weaving together narrative text and code to produce elegantly formatted output that people can easily read and understand. In this workshop, you’ll learn how to use Quarto for reports and presentations and Great Tables for elegantly formatted tables to convey information that’s great for the readers, and easy for you to create too. Quarto is an open source tool based on Pandoc that allows you to create and publish reproducible, production-quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more, right from your Jupyter notebooks.
 
-See [bit.ly/quarto-scipy24](https://bit.ly/quarto-scipy24) for more info and workshop materials.
+With Great Tables you can make wonderful-looking tables in Python. Great Tables is an open source Python package that lets you mix and match things like a header and footer, attach a stub (which contains row labels), arrange spanner labels over top of the column labels, and much more. Not only that, but you can format the cell values in a variety of awesome ways.
+
+See [https://tracykteal.github.io/quarto-GT-pyopensci/](https://tracykteal.github.io/quarto-GT-pyopensci/) for more info and workshop materials.
+The materials for the Quarto component of this workshop are a fork from Mine Çetinkaya-Rundel's [Quarto SciPy 2024 workshop](https://bit.ly/quarto-scipy24)
+
+## Instructors
+
+Rich Iannone is a software engineer that focuses on writing software packages focused on data analysis and data visualization workflows. Through this, he really wants to help people accomplish things that were difficult before. He’s been at Posit Software for six years. During that time, among other projects, he has especially enjoyed working to make tables beautiful as a primary developer on gt for R and Great Tables for Python. Before that, he did many science-y things before switching into full-time open source development. 
+
+Tracy Teal is passionate about open source data science tools, and open source sustainability, developing and supporting leaders and teams in science and technology. Currently the open source program director at Nixtla, she has been an open source program director, an executive director of non-profits in the data science and research space, and a researcher, educator and open source developer in bioinformatics. She is a tab-complete advocate, and believes in the power of accessible tools, available resources and inclusive training to bring people to data so they can answer the questions that are important to them. 
