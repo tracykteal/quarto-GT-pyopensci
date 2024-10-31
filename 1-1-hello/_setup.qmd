@@ -1,14 +1,27 @@
-**1. Software:** Download and install Python and Quarto:
+For this workshop we'll be using GitHub Codespaces. 
 
--   Python 3: <https://www.python.org/downloads/>
--   Quarto 1.5.53: <https://quarto.org/docs/get-started/>
+Instructions below for using Codespaces or if you're working locally. 
 
-**2. Tools:** Dowload and install VS Code and Jupyter and Quarto extensions.
+## On Codespaces
 
--   VS Code: <https://code.visualstudio.com/>
--   Quarto Extension: <https://marketplace.visualstudio.com/items?itemName=quarto.quarto>
--   Jupyter Extension: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>
+**1. Quarto environment:** Load the Quarto Codespaces container
 
-**3. Exercises:** Go to [`bit.ly/quarto-scipy24-exercises`](https://bit.ly/quarto-scipy24-exercises), click on "Use this template" then "Create a new repository". Click on the green *Code* button and copy the URL of the repo.
+-   Go to [mcanouil's Quarto Codespaces](https://github.com/mcanouil/quarto-codespaces)
+-   Click 'Use this template' and then 'Open in a codespace'
+-   Wait for the codespace to load!
 
-**4. Packages:** Open VS Code. Under *Start*, click on *Clone Git Repository*, and paste the URL of the repo. Open the cloned project. In the Command Palette, go to `Python: Create Environment...` and choose `Venv`, then choose the (latest) Python version you have installed. Check the box for `requirements.txt` in the "Select dependencies to install" menu and hit OK.
+**2. Tools:** Install some VS Code extensions.
+
+-   The Quarto extension and Quarto CLI are already installed. You're all set there!
+-   Install the Jupyter Extension: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>
+
+**3. Exercises:** Get the exercises from [`https://github.com/tracykteal/quarto-GT-pyopensci-exercises`](https://github.com/tracykteal/quarto-GT-pyopensci-exercises).
+
+-   Go to the Terminal in your codespace
+-   Type `git clone https://github.com/tracykteal/quarto-GT-pyopensci-exercises.git`
+-   You'll see the directory `quarto-GT-pyopensci-exercises` appear in your file navigator.
+
+**4. Packages:** Install packages.
+-   Go to View -> Command Palette
+-   Search for and select `Python: Create Environment...` and choose `Venv`, then choose the (latest) Python version. 
+-   Check the box for `requirements.txt` in the "Select dependencies to install" menu and hit OK.

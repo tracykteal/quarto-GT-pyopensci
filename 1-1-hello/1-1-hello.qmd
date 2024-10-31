@@ -1,69 +1,56 @@
 ---
 title: "Hello, Quarto!"
-subtitle: "SciPy 2024: Unlocking Dynamic Reproducible Documents<br>A Quarto Tutorial for Scientific Communication"
-author: "Mine Çetinkaya Rundel"
-institute: "Duke University + Posit PBC"
-footer: "🔗 [bit.ly/quarto-scipy24](https://bit.ly/quarto-scipy24)"
+subtitle: "pyOpenSci Fall Festival 2024: Reproducible reports and presentations <br> with Quarto and Great Tables"
+author: "Tracy Teal and Rich Iannone"
+institute: "Slides about Quarto from Mine Çetinkaya Rundel"
+footer: "🔗 [https://tracykteal.github.io/quarto-GT-pyopensci/](https://tracykteal.github.io/quarto-GT-pyopensci/)"
 format:
   revealjs:
     output-file: 1-1-hello-reveal.html
     transition: fade
     slide-number: true
     chalkboard: true
-    logo: ../images/quarto-scipy24-slide-logo.png
+    logo: ../images/pyQuartoGT.png
     theme: ../style/slides.scss
 filters: 
   - countdown
 ---
 
-# Pre-workshop
-
-## Setup {.smaller}
-
-::: your-turn
-{{< include _setup.qmd >}}
-:::
-
 # Welcome
 
 ## Code of Conduct {.smaller}
 
-Attendees at SciPy 2024 are subject to the NumFOCUS Code of Conduct.
+Attendees at this event are subject to the pyOpenSci Code of Conduct.
 
-Be kind to others. Do not insult or put down others. Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for NumFOCUS.
+Be kind to others. Do not insult or put down others. Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate.
 
 All communication should be appropriate for a professional audience including people of many different backgrounds. Sexual language and imagery is not appropriate.
 
-NumFOCUS is dedicated to providing a harassment-free community for everyone, regardless of gender, sexual orientation, gender identity and expression, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of community members in any form.
+We're dedicated to providing a harassment-free community for everyone, regardless of gender, sexual orientation, gender identity and expression, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of community members in any form.
 
 Thank you for helping make this a welcoming, friendly community for all.
 
-::: aside
-[For more info and reporting a code of conduct incident](https://www.scipy2024.scipy.org/#Code-of-Conduct)
-:::
 
-## About me
+## About us
 
 ::::: columns
 ::: {.column width="50%"}
--   Professor of the Practice\
-    Department of Statistical Science\
-    Duke University
+-   Rich Iannone, Software Developer, Posit PBC
 
--   Developer Educator, Posit PBC
+-   Tracy Teal, Open Source Program Director, Nixtla
+
+
 :::
 
 ::: {.column width="50%" style="text-align: center;"}
 ![](images/mine.png){fig-alt="Mine's headshot" fig-align="center"}
+![](images/mine.png){fig-alt="Mine's headshot" fig-align="center"}
 
-**Mine Çetinkaya-Rundel**
-
-[mine-cr.com](https://mine-cr.com)
 :::
 :::::
 
--   Teaching data analysis in computational notebooks for 10+ years
--   Teaching and using Quarto for 3+ years
+-   Teaching data analysis for 10+ years
+-   Teaching and using Quarto and gt/GT for 3+ years
 
 ## About you
 
@@ -88,19 +75,21 @@ These materials are pitched at someone who:
 
 -   has worked in VS Code and/or Jupyter Lab
 
--   wants to learn about Quarto
+-   wants to learn about Quarto and great tables
 :::
 ::::
 
 :::: {.column width="50%"}
 ::: {.fragment .fade-in}
-I'll teach you
+We'll teach you
 
 -   More Markdown
 
--   New Quarto formats
+-   Getting started with Quarto
 
--   New Quarto projects
+-   Creating great looking tables
+
+-   Creating professional looking documents
 :::
 ::::
 :::::::
@@ -136,17 +125,11 @@ I'll teach you
 
 ## Getting help
 
--   During **my turn** and **your turn** segments -- raise your hand
+-   During **my turn** and **your turn** segments -- raise your virtual hand
 
--   During **our turn** segments -- also feel free to raise your hand for questions but if your question seems specific to your setup, I might come around and help during the next your turn break
+-   During **our turn** segments -- also feel free to raise your hand for questions but if your question seems specific to your setup, we might wait to help during the next your turn break
 
-## Setup {.smaller}
-
-::: your-turn
-{{< include _setup.qmd >}}
-:::
-
-. . .
+## 
 
 ::: {.hand-blue-large style="text-align: center;"}
 Let's get started!
@@ -368,6 +351,14 @@ quarto preview notebook.qmd --to pdf
 
 : {tbl-colwidths="\[25,75\]"}
 
+# Working with Quarto in VSCode with Codespaces
+
+## Setup {.smaller}
+
+::: your-turn
+{{< include _setup.qmd >}}
+:::
+
 ## Your turn
 
 ::: your-turn
@@ -415,3 +406,6 @@ Source: <https://en.wikipedia.org/wiki/Quarto>
 ::: your-turn
 Any questions / anything you'd like to review before we wrap up this module?
 :::
+
+
+
