@@ -36,3 +36,25 @@ Tracy Teal is passionate about open source data science tools, and open source s
 | 12:00am   | Break |
 | 12:15pm   | Wrap up | 
 
+## Setup
+
+We'll be using VSCode in this workshop and working on [Codespaces](https://github.com/features/codespaces). 
+
+### Log in to Codespaces and install some VSCode extensions
+* Log in to [Codespaces](https://github.com/features/codespaces)
+* Start with a Blank template
+
+### Install the Quarto CLI
+* Install the Quarto CLI (instructions also in `playground.qmd`) ([Quarto instructions for Linux installation](https://quarto.org/docs/download/tarball.html) which we need to do on Codespaces. If you're working locally you can download the CLI and install it.)
+
+At the terminal type:
+`wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-linux-amd64.tar.gz`
+`mkdir ~/opt`
+`tar -C ~/opt -xvzf quarto-1.5.57-linux-amd64.tar.gz`
+`ln -s ~/opt/quarto-1.5.57/bin/quarto ~/.local/bin/quarto`
+`quarto -v` 
+
+### Install some VSCode extensions
+* Search for the Quarto extension and install that extension
+* Search for the Preview extension and install that extension
+
