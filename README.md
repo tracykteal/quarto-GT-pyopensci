@@ -4,7 +4,7 @@ Materials for pyOpenSci Fall Festival workshop
 
 ## Info
 
-🗓️ Date:November 1, 2024
+🗓️ Date:November 1, 2024  
 🕗 Time: 08:00 - 1:00 US/Pacific  
 🏨 Location: online
 
@@ -22,3 +22,17 @@ The materials for the Quarto component of this workshop are a fork from Mine Çe
 Rich Iannone is a software engineer that focuses on writing software packages focused on data analysis and data visualization workflows. Through this, he really wants to help people accomplish things that were difficult before. He’s been at Posit Software for six years. During that time, among other projects, he has especially enjoyed working to make tables beautiful as a primary developer on gt for R and Great Tables for Python. Before that, he did many science-y things before switching into full-time open source development. 
 
 Tracy Teal is passionate about open source data science tools, and open source sustainability, developing and supporting leaders and teams in science and technology. Currently the open source program director at Nixtla, she has been an open source program director, an executive director of non-profits in the data science and research space, and a researcher, educator and open source developer in bioinformatics. She is a tab-complete advocate, and believes in the power of accessible tools, available resources and inclusive training to bring people to data so they can answer the questions that are important to them. 
+
+## Schedule
+
+| Time (MDT)    | Topic |
+| -------- | ------- |
+| 8:00am  | Welcome    |
+| 8:15am | What is Quarto? |
+| 8:45am    | Quarto documents |
+| 9:15am    | VSCode and Quarto |
+| 9:30am    | Break |
+| 9:45am    | Great Tables |
+| 12:00am   | Break |
+| 12:15pm   | Wrap up | 
+
