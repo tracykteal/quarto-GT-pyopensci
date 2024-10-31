@@ -27,14 +27,13 @@ Tracy Teal is passionate about open source data science tools, and open source s
 
 | Time (MDT)    | Topic |
 | -------- | ------- |
-| 8:00am  | Welcome    |
-| 8:15am | What is Quarto? |
-| 8:45am    | Quarto documents |
-| 9:15am    | VSCode and Quarto |
-| 9:30am    | Break |
-| 9:45am    | Great Tables |
-| 12:00am   | Break |
-| 12:15pm   | Wrap up | 
+| 9:00am  | Welcome    |
+| 9:15am | What is Quarto? |
+| 9:45am    | Quarto documents |
+| 10:15am    | VSCode and Quarto |
+| 10:30am    | Break |
+| 10:45am    | Great Tables |
+| 12:45pm   | Wrap up | 
 
 ## Setup
 
