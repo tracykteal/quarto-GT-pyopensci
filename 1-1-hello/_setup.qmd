@@ -38,3 +38,30 @@ Open `setup.qmd` and run the installation code block to install:
   - great_tables
   - selenium
   - plotnine
+  - palmerpenguins
+
+## Locally
+
+
+**1. Install the Quarto extension.** 
+
+Within VS Code install:
+
+* the Quarto extension
+* the Quarto CLI (once you install the extension, you'll be prompted to download and install the CLI)
+
+**2. Exercises:** Get the exercises from [`https://github.com/tracykteal/quarto-GT-pyopensci-exercises`](https://github.com/tracykteal/quarto-GT-pyopensci-exercises).
+
+* Clone the [exercises github repository](https://github.com/tracykteal/quarto-GT-pyopensci-exercises) how you usually do your git cloning.
+
+* Go into that directory from within VS Code.
+
+**3. Packages:** Install some packages. 
+
+Open `setup.qmd` and run the installation code block to install:
+
+  - polars
+  - pandas
+  - great_tables
+  - selenium
+  - plotnine
