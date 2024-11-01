@@ -316,7 +316,7 @@
     "href": "index.html#references",
     "title": "Reproducible reports and presentations with Quarto and Great Tables",
     "section": "References",
-    "text": "References\nSee https://tracykteal.github.io/quarto-GT-pyopensci/ for more info and workshop materials.\nThe materials for the Quarto component of this workshop are a fork from Mine Çetinkaya-Rundel’s great Quarto SciPy 2024 workshop.\nLogo created by Jesse Mostipak.",
+    "text": "References\nSee https://tracykteal.github.io/quarto-GT-pyopensci/ for more info and workshop materials.\nExercises for this workshop: https://github.com/tracykteal/quarto-GT-pyopensci-exercises\nThe materials for the Quarto component of this workshop are a fork from Mine Çetinkaya-Rundel’s great Quarto SciPy 2024 workshop.\nLogo created by Jesse Mostipak.",
     "crumbs": [
       "Home"
     ]
