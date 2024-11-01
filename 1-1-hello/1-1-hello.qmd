@@ -3,7 +3,7 @@ title: "Hello, Quarto!"
 subtitle: "pyOpenSci Fall Festival 2024: Reproducible reports and presentations <br> with Quarto and Great Tables"
 author: "Tracy Teal and Rich Iannone"
 institute: "Slides about Quarto from Mine Çetinkaya Rundel"
-footer: "🔗 [https://tracykteal.github.io/quarto-GT-pyopensci/](https://tracykteal.github.io/quarto-GT-pyopensci/)"
+footer: "🔗 [https://bit.ly/quarto-GT-pyopensci](https://bit.ly/quarto-GT-pyopensci)"
 format:
   revealjs:
     output-file: 1-1-hello-reveal.html
@@ -43,8 +43,8 @@ Thank you for helping make this a welcoming, friendly community for all.
 :::
 
 ::: {.column width="50%" style="text-align: center;"}
-![](images/mine.png){fig-alt="Mine's headshot" fig-align="center"}
-![](images/mine.png){fig-alt="Mine's headshot" fig-align="center"}
+![](images/rich.png){fig-alt="Rich's headshot" fig-align="center"}
+![](images/tracy.png){fig-alt="Tracy's headshot" fig-align="center"}
 
 :::
 :::::
@@ -55,10 +55,10 @@ Thank you for helping make this a welcoming, friendly community for all.
 ## About you
 
 ::: your-turn
-Please share with the person next to you...
+Please share with the person virtually next to you...
 
 -   Your name
--   Your professional affiliation
+-   Something you've already learned at the fall festival
 -   What you hope to get out of this tutorial
 :::
 
@@ -89,7 +89,7 @@ We'll teach you
 
 -   Creating great looking tables
 
--   Creating professional looking documents
+-   Creating professional looking documents with great tables
 :::
 ::::
 :::::::
