@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reproducible reports and presentations with Quarto and Great Tables - Books</title>
+<title>Reproducible reports and presentations with Quarto and Great Tables</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,8 +103,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Reproducible reports and presentations with Quarto and Great Tables - Books">
-<meta property="og:description" content="A Tutorial for pyOpenSci 2024">
+<meta property="og:title" content="Reproducible reports and presentations with Quarto and Great Tables">
 <meta property="og:site_name" content="Reproducible reports and presentations with Quarto and Great Tables">
 </head>
 
@@ -83,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Books</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Playground file for Quarto and Great Tables workshop</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -97,8 +130,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../images/pyQuartoGT.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/pyQuartoGT.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24" title="GitHub repo" class="quarto-navigation-tool px-1" aria-label="GitHub repo"><i class="bi bi-github"></i></a>
@@ -115,13 +148,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../setup.html" class="sidebar-item-text sidebar-link">
+  <a href="./setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setup</span></a>
   </div>
 </li>
@@ -136,31 +169,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../1-1-hello/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-1-hello/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hello</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../1-2-documents/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-2-documents/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documents</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../1-3-presentations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-3-presentations/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Presentations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../1-3-5-great-tables/index.qmd" class="sidebar-item-text sidebar-link">
+  <a href="./1-3-5-great-tables/index.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Great tables with Great Tables</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../1-4-dashboards/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-4-dashboards/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dashboards</span></a>
   </div>
 </li>
@@ -176,17 +209,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#slides" id="toc-slides" class="nav-link active" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#install-some-python-packages" id="toc-install-some-python-packages" class="nav-link active" data-scroll-target="#install-some-python-packages">Install some Python packages</a></li>
+  <li><a href="#write-some-code" id="toc-write-some-code" class="nav-link" data-scroll-target="#write-some-code">Write some code</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/edit/main/2-2-books/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/edit/main/playground.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Books</h1>
+<h1 class="title">Playground file for Quarto and Great Tables workshop</h1>
 </div>
 
 
@@ -203,14 +236,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p><a href="2-2-books-reveal.html">View slides in full screen</a></p>
-<iframe class="slide-deck" src="2-2-books-reveal.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<section id="install-some-python-packages" class="level3">
+<h3 class="anchored" data-anchor-id="install-some-python-packages">Install some Python packages</h3>
+<div id="21b1c407" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install great_tables</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install polars</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install pandas</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install selenium</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Requirement already satisfied: great_tables in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (0.13.0)
+Requirement already satisfied: commonmark&gt;=0.9.1 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from great_tables) (0.9.1)
+Requirement already satisfied: htmltools&gt;=0.4.1 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from great_tables) (0.6.0)
+Requirement already satisfied: importlib-metadata in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from great_tables) (8.5.0)
+Requirement already satisfied: typing-extensions&gt;=3.10.0.0 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from great_tables) (4.10.0)
+Requirement already satisfied: numpy&gt;=1.22.4 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from great_tables) (1.26.4)
+Requirement already satisfied: Babel&gt;=2.13.1 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from great_tables) (2.14.0)
+Requirement already satisfied: importlib-resources in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from great_tables) (6.4.5)
+Requirement already satisfied: packaging&gt;=20.9 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from htmltools&gt;=0.4.1-&gt;great_tables) (23.2)
+Requirement already satisfied: zipp&gt;=3.20 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from importlib-metadata-&gt;great_tables) (3.20.2)
+
+[notice] A new release of pip is available: 24.2 -&gt; 24.3.1
+[notice] To update, run: pip install --upgrade pip
+Requirement already satisfied: polars in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (1.12.0)
+
+[notice] A new release of pip is available: 24.2 -&gt; 24.3.1
+[notice] To update, run: pip install --upgrade pip
+Requirement already satisfied: pandas in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (2.2.1)
+Requirement already satisfied: numpy&lt;2,&gt;=1.23.2 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from pandas) (1.26.4)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from pandas) (2024.1)
+Requirement already satisfied: tzdata&gt;=2022.7 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from pandas) (2024.1)
+Requirement already satisfied: six&gt;=1.5 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.16.0)
+
+[notice] A new release of pip is available: 24.2 -&gt; 24.3.1
+[notice] To update, run: pip install --upgrade pip
+Requirement already satisfied: selenium in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (4.26.1)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.26 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from urllib3[socks]&lt;3,&gt;=1.26-&gt;selenium) (2.2.1)
+Requirement already satisfied: trio~=0.17 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from selenium) (0.27.0)
+Requirement already satisfied: trio-websocket~=0.9 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from selenium) (0.11.1)
+Requirement already satisfied: certifi&gt;=2021.10.8 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from selenium) (2024.2.2)
+Requirement already satisfied: typing_extensions~=4.9 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from selenium) (4.10.0)
+Requirement already satisfied: websocket-client~=1.8 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from selenium) (1.8.0)
+Requirement already satisfied: attrs&gt;=23.2.0 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from trio~=0.17-&gt;selenium) (23.2.0)
+Requirement already satisfied: sortedcontainers in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from trio~=0.17-&gt;selenium) (2.4.0)
+Requirement already satisfied: idna in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from trio~=0.17-&gt;selenium) (3.6)
+Requirement already satisfied: outcome in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from trio~=0.17-&gt;selenium) (1.3.0.post0)
+Requirement already satisfied: sniffio&gt;=1.3.0 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from trio~=0.17-&gt;selenium) (1.3.1)
+Requirement already satisfied: wsproto&gt;=0.14 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from trio-websocket~=0.9-&gt;selenium) (1.2.0)
+Requirement already satisfied: pysocks!=1.5.7,&lt;2.0,&gt;=1.5.6 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from urllib3[socks]&lt;3,&gt;=1.26-&gt;selenium) (1.7.1)
+Requirement already satisfied: h11&lt;1,&gt;=0.9.0 in /Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages (from wsproto&gt;=0.14-&gt;trio-websocket~=0.9-&gt;selenium) (0.14.0)
+
+[notice] A new release of pip is available: 24.2 -&gt; 24.3.1
+[notice] To update, run: pip install --upgrade pip</code></pre>
+</div>
+</div>
 </section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
-<p>See <a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises" class="uri">https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises</a>.</p>
+<section id="write-some-code" class="level3">
+<h3 class="anchored" data-anchor-id="write-some-code">Write some code</h3>
+<div id="c21518b3" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>2</code></pre>
+</div>
+</div>
 
 
 </section>
@@ -777,7 +865,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/edit/main/2-2-books/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/edit/main/playground.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with 💚 and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

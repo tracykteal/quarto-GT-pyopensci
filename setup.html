@@ -190,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1-3-5-great-tables/index.html" class="sidebar-item-text sidebar-link">
+  <a href="./1-3-5-great-tables/index.qmd" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Great tables with Great Tables</span></a>
   </div>
 </li>
@@ -208,7 +208,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#on-codespaces" id="toc-on-codespaces" class="nav-link active" data-scroll-target="#on-codespaces">On Codespaces</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -232,19 +238,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>1. Software:</strong> Download and install Python and Quarto:</p>
+<p>For this workshop we’ll be using GitHub Codespaces.</p>
+<p>Instructions below for using Codespaces or if you’re working locally.</p>
+<section id="on-codespaces" class="level2">
+<h2 class="anchored" data-anchor-id="on-codespaces">On Codespaces</h2>
+<p><strong>1. Quarto environment:</strong> Load the Quarto Codespaces container</p>
 <ul>
-<li>Python 3: <a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a></li>
-<li>Quarto 1.5.53: <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a></li>
+<li>Go to <a href="https://github.com/mcanouil/quarto-codespaces">mcanouil’s Quarto Codespaces</a></li>
+<li>Click ‘Use this template’ and then ‘Open in a codespace’</li>
+<li>Wait for the codespace to load!</li>
 </ul>
-<p><strong>2. Tools:</strong> Dowload and install VS Code and Jupyter and Quarto extensions.</p>
+<p><strong>2. Tools:</strong> Install some VS Code extensions.</p>
 <ul>
-<li>VS Code: <a href="https://code.visualstudio.com/" class="uri">https://code.visualstudio.com/</a></li>
-<li>Quarto Extension: <a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto" class="uri">https://marketplace.visualstudio.com/items?itemName=quarto.quarto</a></li>
-<li>Jupyter Extension: <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter" class="uri">https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter</a></li>
+<li>The Quarto extension and Quarto CLI are already installed. You’re all set there!</li>
+<li>Install the Jupyter Extension: <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter" class="uri">https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter</a></li>
 </ul>
-<p><strong>3. Exercises:</strong> Go to <a href="https://bit.ly/quarto-scipy24-exercises"><code>bit.ly/quarto-scipy24-exercises</code></a>, click on “Use this template” then “Create a new repository”. Click on the green <em>Code</em> button and copy the URL of the repo.</p>
-<p><strong>4. Packages:</strong> Open VS Code. Under <em>Start</em>, click on <em>Clone Git Repository</em>, and paste the URL of the repo. Open the cloned project. In the Command Palette, go to <code>Python: Create Environment...</code> and choose <code>Venv</code>, then choose the (latest) Python version you have installed. Check the box for <code>requirements.txt</code> in the “Select dependencies to install” menu and hit OK.</p>
+<p><strong>3. Environment:</strong> Set up the environment</p>
+<ul>
+<li>Go to View -&gt; Command Palette</li>
+<li>Search for and select <code>Python: Create Environment...</code> and choose <code>Venv</code>, then choose the (latest) Python version.</li>
+<li>Install jupyter. At the terminal type <code>python3 -m pip install jupyter</code></li>
+</ul>
+<p><strong>4. Exercises:</strong> Get the exercises from <a href="https://github.com/tracykteal/quarto-GT-pyopensci-exercises"><code>https://github.com/tracykteal/quarto-GT-pyopensci-exercises</code></a>.</p>
+<ul>
+<li>Go to the Terminal in your codespace</li>
+<li>Type <code>git clone https://github.com/tracykteal/quarto-GT-pyopensci-exercises.git</code></li>
+<li>You’ll see the directory <code>quarto-GT-pyopensci-exercises</code> appear in your file navigator.</li>
+<li>Go into that directory.</li>
+</ul>
+<p><strong>5. Packages:</strong> Install some packages.</p>
+<p>Open <code>setup.qmd</code> and run the installation code block to install:</p>
+<ul>
+<li>polars</li>
+<li>pandas</li>
+<li>great_tables</li>
+<li>selenium</li>
+<li>plotnine</li>
+</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -272,6 +302,7 @@ Note
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -847,7 +878,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mine-cetinkaya-rundel/quarto-scipy24/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with 💚 and <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
