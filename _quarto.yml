@@ -33,18 +33,28 @@ website:
         text: Home
       - href: setup.qmd
         text: Setup
-      - section: Single documents
+      - section: Quarto
         contents:
           - href: 1-1-hello/index.qmd
             text: Hello
           - href: 1-2-documents/index.qmd
             text: Documents
-          - href: 1-3-presentations/index.qmd
-            text: Presentations
+      - section: Great Tables
+        contents:
           - href: 1-3-5-great-tables/index.qmd
             text: Great tables with Great Tables
+      - section: More Quarto to explore on your own
+        contents:
+          - href: 1-3-presentations/index.qmd
+            text: Presentations
           - href: 1-4-dashboards/index.qmd
             text: Dashboards
+          - href: 2-1-websites/index.qmd
+            text: Websites
+          - href: 2-2-books/index.qmd
+            text: Books
+          - href: 2-3-manuscripts/index.qmd
+            text: Manuscripts
 
   page-footer:
     right: "This page is built with 💚 and [Quarto](https://quarto.org/)."

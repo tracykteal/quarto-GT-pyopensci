@@ -1,0 +1,12 @@
+---
+title: "Great tables with Great Tables"
+---
+
+## Slides
+
+[Great Tables slides](https://github.com/tracykteal/quarto-GT-pyopensci/blob/main/1-3-5-great-tables/slides/GT_slides.pdf)
+
+
+## Exercises
+
+See <https://github.com/tracykteal/quarto-GT-pyopensci-exercises>.

@@ -9,50 +9,35 @@ subtitle: Tutorial at pyOpenSci Fall Festival 2024
 
 ## Abstract
 
-Quarto is an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and plain text markdown documents. Quarto provides data scientists with a seamless way to publish their work in a high-quality format that is reproducible, accessible, and shareable. With Quarto, researchers can turn their Jupyter Notebooks and literate plain text markdown documents into professional-looking publications in various formats. This workshop will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality documents, slides, websites, scientific manuscripts, and other shareable artifacts.
+If you want to use data to make decisions, answer scientific questions, inform people on issues or participate in data-driven journalism, just conducting the data analysis is not enough. Effective communication requires weaving together narrative text and code to produce elegantly formatted output that people can easily read and understand. In this workshop, you’ll learn how to use Quarto for reports and presentations and Great Tables for elegantly formatted tables to convey information that’s great for the readers, and easy for you to create too. Quarto is an open source tool based on Pandoc that allows you to create and publish reproducible, production-quality articles, presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more, right from your Jupyter notebooks.
 
-## Overview
+With Great Tables you can make wonderful-looking tables in Python. Great Tables is an open source Python package that lets you mix and match things like a header and footer, attach a stub (which contains row labels), arrange spanner labels over top of the column labels, and much more. Not only that, but you can format the cell values in a variety of awesome ways.
 
-Sharing knowledge through writing is a critical aspect of scientific activity, including data science. It allows researchers to communicate their findings and insights to a broader audience, build upon existing work, and collaborate with others in their field. Quarto, an innovative, open-source scientific and technical publishing system compatible with Jupyter Notebooks and plain text markdown documents, provides data scientists with a seamless way to publish their work in a high-quality format that is easily accessible, shareable, and reproducible. With Quarto, researchers and data professionals can turn their notebooks into professional-looking publications in various formats, including web pages, books, slides, dashboards, and scientific manuscripts. This workshop will demonstrate how Quarto enables data scientists to turn their work products into professional, high-quality publications.
+## References
 
-The learning outcomes for the workshop include:
+See [https://tracykteal.github.io/quarto-GT-pyopensci/](https://tracykteal.github.io/quarto-GT-pyopensci/) for more info and workshop materials.
 
--   Author documents in plain text markdown or Jupyter notebooks with equations, citations, crossrefs, figure panels, callouts, and advanced layouts.
--   Learn how to author content in IPython/Jupyter and the Quarto VS Code extension.
--   Leverage Quarto for creating different types of publications, including webpages/blogs, slides, dashboards, books, websites, and scientific manuscripts.
--   Customize execution and content with a rich array of code cell options, filters, and extensions.
--   Host websites and publications on platforms such as GitHub Pages, QuartoPub, and Netlify.
+The materials for the Quarto component of this workshop are a fork from Mine Çetinkaya-Rundel's great [Quarto SciPy 2024 workshop](https://bit.ly/quarto-scipy24).
+
+Logo created by Jesse Mostipak. 
+
+## Instructors
+
+Rich Iannone is a software engineer that focuses on writing software packages focused on data analysis and data visualization workflows. Through this, he really wants to help people accomplish things that were difficult before. He’s been at Posit Software for six years. During that time, among other projects, he has especially enjoyed working to make tables beautiful as a primary developer on gt for R and Great Tables for Python. Before that, he did many science-y things before switching into full-time open source development. 
+
+Tracy Teal is passionate about open source data science tools, and open source sustainability, developing and supporting leaders and teams in science and technology. Currently the open source program director at Nixtla, she has been an open source program director, an executive director of non-profits in the data science and research space, and a researcher, educator and open source developer in bioinformatics. She is a tab-complete advocate, and believes in the power of accessible tools, available resources and inclusive training to bring people to data so they can answer the questions that are important to them. 
 
 ## Schedule
 
-To be posted.
-
-<!--
-+-------------------+------------------------------------------------+
-| Time              | Module                                         |
-+===================+================================================+
-| 09:00 - 10:30     | [Hello Quarto](1-hello-quarto/index.qmd)       |
-+-------------------+------------------------------------------------+
-| 10:30 - 11:00     | Break ☕                                       |
-+-------------------+------------------------------------------------+
-| 11:00 - 12:30     | [Documents](2-documents/index.qmd)             |
-+-------------------+------------------------------------------------+
-| 12:30 - 13:30     | Lunch 🍽️                                       |
-+-------------------+------------------------------------------------+
-| 13:30 - 15:00     | [Presentations](3-presentations/index.qmd)     |
-+-------------------+------------------------------------------------+
-| 15:00 - 15:30     | Break ☕                                       |
-+-------------------+------------------------------------------------+
-| 15:30 - 17:00     | [Websites](4-websites/index.qmd)               |
-|                   |                                                |
-|                   | Time permitting: Journal articles              |
-+-------------------+------------------------------------------------+
--->
-
-## Instructor
-
-[Mine Çetinkaya-Rundel](https://mine-cr.com/) is Professor of the Practice at Duke University and Developer Educator at Posit. Mine's work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine is a Fellow of the ASA and Elected Member of the ISI as well as the winner of the 2021 Robert V. Hogg Award for For Excellence in Teaching Introductory Statistics.
-
+| Time (MDT)    | Topic |
+| -------- | ------- |
+| 9:00am  | Welcome    |
+| 9:15am | What is Quarto? |
+| 9:45am    | Quarto documents |
+| 10:15am    | VSCode and Quarto |
+| 10:30am    | Break |
+| 10:45am    | Great Tables |
+| 12:45pm   | Wrap up | 
 ------------------------------------------------------------------------
 
 ![](https://i.creativecommons.org/l/by/4.0/88x31.png) This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

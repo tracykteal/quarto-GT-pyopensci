@@ -1,9 +1,8 @@
 ---
 title: "Documents"
-subtitle: "SciPy 2024: Unlocking Dynamic Reproducible Documents<br>A Quarto Tutorial for Scientific Communication"
-author: "Mine Çetinkaya Rundel"
-institute: "Duke University + Posit PBC"
-footer: "🔗 [bit.ly/quarto-scipy24](https://bit.ly/quarto-scipy24)"
+subtitle: "pyOpenSci Fall Festival 2024: Reproducible reports and presentations <br> with Quarto and Great Tables"
+author: "Mine Çetinkaya Rundel with adaptations by Tracy Teal"
+footer: "🔗 [bit.ly/quarto-GT-pyopensci](https://bit.ly/quarto-GT-pyopensci)"
 format:
   revealjs:
     output-file: 1-2-documents-reveal.html
@@ -40,7 +39,7 @@ Literate programming is writing out the program logic in a human language with i
 ````{.markdown code-line-numbers="|7|9-29"}
 ---
 title: plotnine demo
-date: 7/8/2024
+date: 11/01/2024
 format: html
 ---
 
