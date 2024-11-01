@@ -25,14 +25,14 @@
     "href": "1-1-hello/1-1-hello-reveal.html#about-you",
     "title": "Hello, Quarto!",
     "section": "About you",
-    "text": "About you\n\nPlease share with the person next to you…\n\nYour name\nYour professional affiliation\nWhat you hope to get out of this tutorial\n\n\n\n  \n    −\n    +\n \n 03:00"
+    "text": "About you\n\nPlease share with the person virtually next to you…\n\nYour name\nSomething you’ve already learned at the fall festival\nWhat you hope to get out of this tutorial\n\n\n\n  \n    −\n    +\n \n 03:00"
   },
   {
     "objectID": "1-1-hello/1-1-hello-reveal.html#meeting-you-where-you-are",
     "href": "1-1-hello/1-1-hello-reveal.html#meeting-you-where-you-are",
     "title": "Hello, Quarto!",
     "section": "Meeting you where you are",
-    "text": "Meeting you where you are\n\n\n\nThese materials are pitched at someone who:\n\nknows some Python + Markdown\nhas worked in VS Code and/or Jupyter Lab\nwants to learn about Quarto and great tables\n\n\n\n\nWe’ll teach you\n\nMore Markdown\nGetting started with Quarto\nCreating great looking tables\nCreating professional looking documents"
+    "text": "Meeting you where you are\n\n\n\nThese materials are pitched at someone who:\n\nknows some Python + Markdown\nhas worked in VS Code and/or Jupyter Lab\nwants to learn about Quarto and great tables\n\n\n\n\nWe’ll teach you\n\nMore Markdown\nGetting started with Quarto\nCreating great looking tables\nCreating professional looking documents with great tables"
   },
   {
     "objectID": "1-1-hello/1-1-hello-reveal.html#workshop-structure",
@@ -144,14 +144,21 @@
     "href": "1-1-hello/1-1-hello-reveal.html#setup",
     "title": "Hello, Quarto!",
     "section": "Setup",
-    "text": "Setup\n\nFor this workshop we’ll be using GitHub Codespaces.\nInstructions below for using Codespaces or if you’re working locally.\n\nOn Codespaces\n1. Quarto environment: Load the Quarto Codespaces container\n\nGo to mcanouil’s Quarto Codespaces\nClick ‘Use this template’ and then ‘Open in a codespace’\nWait for the codespace to load!\n\n2. Tools: Install some VS Code extensions.\n\nThe Quarto extension and Quarto CLI are already installed. You’re all set there!\nInstall the Jupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n3. Environment: Set up the environment\n\nGo to View -&gt; Command Palette\nSearch for and select Python: Create Environment... and choose Venv, then choose the (latest) Python version.\nInstall jupyter. At the terminal type python3 -m pip install jupyter\n\n4. Exercises: Get the exercises from https://github.com/tracykteal/quarto-GT-pyopensci-exercises.\n\nGo to the Terminal in your codespace\nType git clone https://github.com/tracykteal/quarto-GT-pyopensci-exercises.git\nYou’ll see the directory quarto-GT-pyopensci-exercises appear in your file navigator.\nGo into that directory.\n\n5. Packages: Install some packages.\nOpen setup.qmd and run the installation code block to install:\n\npolars\npandas\ngreat_tables\nselenium\nplotnine"
+    "text": "Setup\n\nFor this workshop we’ll be using GitHub Codespaces.\nInstructions below for using Codespaces or if you’re working locally.\n\nOn Codespaces\n1. Quarto environment: Load the Quarto Codespaces container\n\nGo to mcanouil’s Quarto Codespaces\nClick ‘Use this template’ and then ‘Open in a codespace’\nWait for the codespace to load!\n\n2. Tools: Install some VS Code extensions.\n\nThe Quarto extension and Quarto CLI are already installed. You’re all set there!\nInstall the Jupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n3. Environment: Set up the environment\n\nGo to View -&gt; Command Palette\nSearch for and select Python: Create Environment... and choose Venv, then choose the (latest) Python version.\nInstall jupyter. At the terminal type python3 -m pip install jupyter\n\n4. Exercises: Get the exercises from https://github.com/tracykteal/quarto-GT-pyopensci-exercises.\n\nGo to the Terminal in your codespace\nType git clone https://github.com/tracykteal/quarto-GT-pyopensci-exercises.git\nYou’ll see the directory quarto-GT-pyopensci-exercises appear in your file navigator.\nGo into that directory.\n\n5. Packages: Install some packages.\nOpen setup.qmd and run the installation code block to install:\n\npolars\npandas\ngreat_tables\nselenium\nplotnine\npalmerpenguins\n\n\n\nLocally\n1. Install the Quarto extension.\nWithin VS Code install:\n\nthe Quarto extension\nthe Quarto CLI (once you install the extension, you’ll be prompted to download and install the CLI)\n\n2. Exercises: Get the exercises from https://github.com/tracykteal/quarto-GT-pyopensci-exercises.\n\nClone the exercises github repository how you usually do your git cloning.\nGo into that directory from within VS Code.\n\n3. Packages: Install some packages.\nOpen setup.qmd and run the installation code block to install:\n\npolars\npandas\ngreat_tables\nselenium\nplotnine"
   },
   {
     "objectID": "1-1-hello/1-1-hello-reveal.html#on-codespaces",
     "href": "1-1-hello/1-1-hello-reveal.html#on-codespaces",
     "title": "Hello, Quarto!",
     "section": "On Codespaces",
-    "text": "On Codespaces\n1. Quarto environment: Load the Quarto Codespaces container\n\nGo to mcanouil’s Quarto Codespaces\nClick ‘Use this template’ and then ‘Open in a codespace’\nWait for the codespace to load!\n\n2. Tools: Install some VS Code extensions.\n\nThe Quarto extension and Quarto CLI are already installed. You’re all set there!\nInstall the Jupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n3. Environment: Set up the environment\n\nGo to View -&gt; Command Palette\nSearch for and select Python: Create Environment... and choose Venv, then choose the (latest) Python version.\nInstall jupyter. At the terminal type python3 -m pip install jupyter\n\n4. Exercises: Get the exercises from https://github.com/tracykteal/quarto-GT-pyopensci-exercises.\n\nGo to the Terminal in your codespace\nType git clone https://github.com/tracykteal/quarto-GT-pyopensci-exercises.git\nYou’ll see the directory quarto-GT-pyopensci-exercises appear in your file navigator.\nGo into that directory.\n\n5. Packages: Install some packages.\nOpen setup.qmd and run the installation code block to install:\n\npolars\npandas\ngreat_tables\nselenium\nplotnine"
+    "text": "On Codespaces\n1. Quarto environment: Load the Quarto Codespaces container\n\nGo to mcanouil’s Quarto Codespaces\nClick ‘Use this template’ and then ‘Open in a codespace’\nWait for the codespace to load!\n\n2. Tools: Install some VS Code extensions.\n\nThe Quarto extension and Quarto CLI are already installed. You’re all set there!\nInstall the Jupyter Extension: https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter\n\n3. Environment: Set up the environment\n\nGo to View -&gt; Command Palette\nSearch for and select Python: Create Environment... and choose Venv, then choose the (latest) Python version.\nInstall jupyter. At the terminal type python3 -m pip install jupyter\n\n4. Exercises: Get the exercises from https://github.com/tracykteal/quarto-GT-pyopensci-exercises.\n\nGo to the Terminal in your codespace\nType git clone https://github.com/tracykteal/quarto-GT-pyopensci-exercises.git\nYou’ll see the directory quarto-GT-pyopensci-exercises appear in your file navigator.\nGo into that directory.\n\n5. Packages: Install some packages.\nOpen setup.qmd and run the installation code block to install:\n\npolars\npandas\ngreat_tables\nselenium\nplotnine\npalmerpenguins"
+  },
+  {
+    "objectID": "1-1-hello/1-1-hello-reveal.html#locally",
+    "href": "1-1-hello/1-1-hello-reveal.html#locally",
+    "title": "Hello, Quarto!",
+    "section": "Locally",
+    "text": "Locally\n1. Install the Quarto extension.\nWithin VS Code install:\n\nthe Quarto extension\nthe Quarto CLI (once you install the extension, you’ll be prompted to download and install the CLI)\n\n2. Exercises: Get the exercises from https://github.com/tracykteal/quarto-GT-pyopensci-exercises.\n\nClone the exercises github repository how you usually do your git cloning.\nGo into that directory from within VS Code.\n\n3. Packages: Install some packages.\nOpen setup.qmd and run the installation code block to install:\n\npolars\npandas\ngreat_tables\nselenium\nplotnine"
   },
   {
     "objectID": "1-1-hello/1-1-hello-reveal.html#your-turn",
@@ -179,7 +186,7 @@
     "href": "1-1-hello/1-1-hello-reveal.html#questions",
     "title": "Hello, Quarto!",
     "section": "Questions",
-    "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?\n\n\n\n\n\n🔗 https://tracykteal.github.io/quarto-GT-pyopensci/"
+    "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?\n\n\n\n\n\n🔗 https://bit.ly/quarto-GT-pyopensci"
   },
   {
     "objectID": "1-3-5-great-tables/z-answers-code-along/py-02-reactions-table.html",
@@ -1526,7 +1533,7 @@
     "href": "1-1-hello/index.html#exercises",
     "title": "Hello, Quarto!",
     "section": "Exercises",
-    "text": "Exercises\nSee https://github.com/mine-cetinkaya-rundel/quarto-scipy24-exercises.",
+    "text": "Exercises\nSee https://github.com/tracykteal/quarto-GT-pyopensci-exercises.",
     "crumbs": [
       "Single documents",
       "Hello"
