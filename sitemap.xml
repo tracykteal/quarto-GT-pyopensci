@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-1-hello/1-1-hello-reveal.html</loc>
-    <lastmod>2024-11-01T06:02:02.366Z</lastmod>
+    <lastmod>2024-11-01T06:42:09.192Z</lastmod>
   </url>
   <url>
     <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-5-great-tables/z-answers-code-along/py-02-reactions-table.html</loc>
@@ -17,23 +17,47 @@
     <lastmod>2024-10-31T23:59:30.908Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-5-great-tables/01-primers/01-create-table.html</loc>
-    <lastmod>2024-10-31T22:45:19.144Z</lastmod>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-5-great-tables/index.html</loc>
+    <lastmod>2024-11-01T06:51:58.906Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-5-great-tables/01-primers/02-create-modify-parts.html</loc>
-    <lastmod>2024-10-31T23:51:01.919Z</lastmod>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-5-great-tables/01-primers/03-format-data.html</loc>
+    <lastmod>2024-10-31T22:45:19.145Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-3-manuscripts/2-3-manuscripts-reveal.html</loc>
-    <lastmod>2024-10-31T22:45:19.392Z</lastmod>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/index.html</loc>
+    <lastmod>2024-11-01T06:13:55.261Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-2-documents/1-2-documents-reveal.html</loc>
-    <lastmod>2024-10-31T22:45:19.121Z</lastmod>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-3-manuscripts/index.html</loc>
+    <lastmod>2024-10-31T22:45:19.418Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-1-websites/index.html</loc>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-2-documents/index.html</loc>
+    <lastmod>2024-11-01T06:52:42.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-1-websites/2-1-websites-reveal.html</loc>
+    <lastmod>2024-10-31T22:45:19.390Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-presentations/index.html</loc>
+    <lastmod>2024-11-01T06:49:09.297Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-2-books/index.html</loc>
+    <lastmod>2024-10-31T22:45:19.391Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-4-dashboards/1-4-dashboards-reveal.html</loc>
+    <lastmod>2024-10-31T22:45:19.354Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-4-dashboards/index.html</loc>
+    <lastmod>2024-10-31T22:45:19.390Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-2-books/2-2-books-reveal.html</loc>
     <lastmod>2024-10-31T22:45:19.391Z</lastmod>
   </url>
   <url>
@@ -41,44 +65,24 @@
     <lastmod>2024-10-31T22:45:19.353Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-2-books/2-2-books-reveal.html</loc>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-1-websites/index.html</loc>
     <lastmod>2024-10-31T22:45:19.391Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-4-dashboards/index.html</loc>
-    <lastmod>2024-10-31T22:45:19.390Z</lastmod>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-2-documents/1-2-documents-reveal.html</loc>
+    <lastmod>2024-11-01T07:01:32.583Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-4-dashboards/1-4-dashboards-reveal.html</loc>
-    <lastmod>2024-10-31T22:45:19.354Z</lastmod>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-3-manuscripts/2-3-manuscripts-reveal.html</loc>
+    <lastmod>2024-10-31T22:45:19.392Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-2-books/index.html</loc>
-    <lastmod>2024-10-31T22:45:19.391Z</lastmod>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-5-great-tables/01-primers/02-create-modify-parts.html</loc>
+    <lastmod>2024-10-31T23:51:01.919Z</lastmod>
   </url>
   <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-presentations/index.html</loc>
-    <lastmod>2024-10-31T22:45:19.354Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-1-websites/2-1-websites-reveal.html</loc>
-    <lastmod>2024-10-31T22:45:19.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-2-documents/index.html</loc>
-    <lastmod>2024-10-31T22:45:19.143Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/2-3-manuscripts/index.html</loc>
-    <lastmod>2024-10-31T22:45:19.418Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/index.html</loc>
-    <lastmod>2024-10-31T22:45:19.701Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-5-great-tables/01-primers/03-format-data.html</loc>
-    <lastmod>2024-10-31T22:45:19.145Z</lastmod>
+    <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-5-great-tables/01-primers/01-create-table.html</loc>
+    <lastmod>2024-10-31T22:45:19.144Z</lastmod>
   </url>
   <url>
     <loc>https://tracykteal.github.io/quarto-GT-pyopensci/1-3-5-great-tables/02-code_along/01-coffee-table.html</loc>

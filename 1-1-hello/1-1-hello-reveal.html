@@ -407,7 +407,7 @@
 Tracy Teal and Rich Iannone 
 </div>
         <p class="quarto-title-affiliation">
-            Slides about Quarto from Mine Çetinkaya Rundel
+            Slides forked from Mine Çetinkaya Rundel
           </p>
     </div>
 </div>
@@ -429,13 +429,13 @@ Tracy Teal and Rich Iannone
 <section id="about-us" class="slide level2">
 <h2>About us</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 <ul>
 <li><p>Rich Iannone, Software Developer, Posit PBC</p></li>
 <li><p>Tracy Teal, Open Source Program Director, Nixtla</p></li>
 </ul>
 </div><div class="column" style="text-align: center;">
-<p><img data-src="images/rich.png" class="quarto-figure quarto-figure-center" alt="Rich's headshot"> <img data-src="images/tracy.png" class="quarto-figure quarto-figure-center" alt="Tracy's headshot"></p>
+<p><img data-src="images/rich.png" class="quarto-figure quarto-figure-center" style="width:2in" alt="Rich's headshot"> <img data-src="images/tracy2.png" class="quarto-figure quarto-figure-center" style="width:2in" alt="Tracy's headshot"></p>
 </div>
 </div>
 <ul>
@@ -453,7 +453,7 @@ Tracy Teal and Rich Iannone
 <li>What you hope to get out of this tutorial</li>
 </ul>
 </div>
-<div id="timer_fbb434efc9bf08547350d1a0f251d32cad1efba3" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_e86fa634799a6361ddc036bec3c4797fecd2b59e" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -564,7 +564,6 @@ Tracy Teal and Rich Iannone
 <li>Customizing format options: <code>code-fold</code>, <code>toc</code></li>
 <li>Code cells: labels, alt-text, execution options (<code>echo</code>, <code>warning</code>)</li>
 <li>Cross referencing figures and tables, with and without the visual editor</li>
-<li>Converting between Jupyter Notebooks and plain text markdown documents</li>
 </ul>
 </div>
 </section></section>
@@ -577,7 +576,7 @@ Tracy Teal and Rich Iannone
 <h2>Revisit: What is Quarto?</h2>
 <p>Quarto is a command line interface (<strong>CLI</strong>) that renders plain text formats (<code>.qmd</code>, <code>.rmd</code>, <code>.md</code>) OR mixed formats (<code>.ipynb</code>/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.</p>
 <div class="fragment">
-<div id="29b06ab3" class="cell" data-execution_count="1">
+<div id="15621bb2" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|1|2|10|15|16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>Usage:   quarto</span>
 <span id="cb1-2"><a></a>Version: <span class="fl">1.5.53</span></span>
 <span id="cb1-3"><a></a></span>
@@ -788,68 +787,7 @@ Tracy Teal and Rich Iannone
 <section id="setup" class="slide level2 smaller">
 <h2>Setup</h2>
 <div class="your-turn">
-<p>For this workshop we’ll be using GitHub Codespaces.</p>
-<p>Instructions below for using Codespaces or if you’re working locally.</p>
-<section id="on-codespaces" class="slide level2">
-<h2>On Codespaces</h2>
-<p><strong>1. Quarto environment:</strong> Load the Quarto Codespaces container</p>
-<ul>
-<li>Go to <a href="https://github.com/mcanouil/quarto-codespaces">mcanouil’s Quarto Codespaces</a></li>
-<li>Click ‘Use this template’ and then ‘Open in a codespace’</li>
-<li>Wait for the codespace to load!</li>
-</ul>
-<p><strong>2. Tools:</strong> Install some VS Code extensions.</p>
-<ul>
-<li>The Quarto extension and Quarto CLI are already installed. You’re all set there!</li>
-<li>Install the Jupyter Extension: <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter" class="uri">https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter</a></li>
-</ul>
-<p><strong>3. Environment:</strong> Set up the environment</p>
-<ul>
-<li>Go to View -&gt; Command Palette</li>
-<li>Search for and select <code>Python: Create Environment...</code> and choose <code>Venv</code>, then choose the (latest) Python version.</li>
-<li>Install jupyter. At the terminal type <code>python3 -m pip install jupyter</code></li>
-</ul>
-<p><strong>4. Exercises:</strong> Get the exercises from <a href="https://github.com/tracykteal/quarto-GT-pyopensci-exercises"><code>https://github.com/tracykteal/quarto-GT-pyopensci-exercises</code></a>.</p>
-<ul>
-<li>Go to the Terminal in your codespace</li>
-<li>Type <code>git clone https://github.com/tracykteal/quarto-GT-pyopensci-exercises.git</code></li>
-<li>You’ll see the directory <code>quarto-GT-pyopensci-exercises</code> appear in your file navigator.</li>
-<li>Go into that directory.</li>
-</ul>
-<p><strong>5. Packages:</strong> Install some packages.</p>
-<p>Open <code>setup.qmd</code> and run the installation code block to install:</p>
-<ul>
-<li>polars</li>
-<li>pandas</li>
-<li>great_tables</li>
-<li>selenium</li>
-<li>plotnine</li>
-<li>palmerpenguins</li>
-</ul>
-</section>
-<section id="locally" class="slide level2">
-<h2>Locally</h2>
-<p><strong>1. Install the Quarto extension.</strong></p>
-<p>Within VS Code install:</p>
-<ul>
-<li>the Quarto extension</li>
-<li>the Quarto CLI (once you install the extension, you’ll be prompted to download and install the CLI)</li>
-</ul>
-<p><strong>2. Exercises:</strong> Get the exercises from <a href="https://github.com/tracykteal/quarto-GT-pyopensci-exercises"><code>https://github.com/tracykteal/quarto-GT-pyopensci-exercises</code></a>.</p>
-<ul>
-<li><p>Clone the <a href="https://github.com/tracykteal/quarto-GT-pyopensci-exercises">exercises github repository</a> how you usually do your git cloning.</p></li>
-<li><p>Go into that directory from within VS Code.</p></li>
-</ul>
-<p><strong>3. Packages:</strong> Install some packages.</p>
-<p>Open <code>setup.qmd</code> and run the installation code block to install:</p>
-<ul>
-<li>polars</li>
-<li>pandas</li>
-<li>great_tables</li>
-<li>selenium</li>
-<li>plotnine</li>
-</ul>
-</section>
+<p>Go to the <a href="https://tracykteal.github.io/quarto-GT-pyopensci/setup.html">setup instructions</a></p>
 </div>
 </section>
 <section id="your-turn" class="slide level2">
@@ -863,7 +801,7 @@ Tracy Teal and Rich Iannone
 <li><p>Change the html theme to <code>sketchy</code>. See <a href="https://quarto.org/docs/output-formats/html-themes.html" class="uri">https://quarto.org/docs/output-formats/html-themes.html</a> for documentation on HTML theming.</p></li>
 </ul>
 </div>
-<div id="timer_fbb434efc9bf08547350d1a0f251d32cad1efba3" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_e86fa634799a6361ddc036bec3c4797fecd2b59e" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
