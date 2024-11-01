@@ -15,13 +15,26 @@ Instructions below for using Codespaces or if you're working locally.
 -   The Quarto extension and Quarto CLI are already installed. You're all set there!
 -   Install the Jupyter Extension: <https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter>
 
-**3. Exercises:** Get the exercises from [`https://github.com/tracykteal/quarto-GT-pyopensci-exercises`](https://github.com/tracykteal/quarto-GT-pyopensci-exercises).
+**3. Environment:** Set up the environment
+
+-   Go to View -> Command Palette
+-   Search for and select `Python: Create Environment...` and choose `Venv`, then choose the (latest) Python version. 
+-   Install jupyter. At the terminal type `python3 -m pip install jupyter`
+
+
+**4. Exercises:** Get the exercises from [`https://github.com/tracykteal/quarto-GT-pyopensci-exercises`](https://github.com/tracykteal/quarto-GT-pyopensci-exercises).
 
 -   Go to the Terminal in your codespace
 -   Type `git clone https://github.com/tracykteal/quarto-GT-pyopensci-exercises.git`
 -   You'll see the directory `quarto-GT-pyopensci-exercises` appear in your file navigator.
+-   Go into that directory.
 
-**4. Packages:** Install packages.
--   Go to View -> Command Palette
--   Search for and select `Python: Create Environment...` and choose `Venv`, then choose the (latest) Python version. 
--   Check the box for `requirements.txt` in the "Select dependencies to install" menu and hit OK.
+**5. Packages:** Install some packages. 
+
+Open `setup.qmd` and run the installation code block to install:
+
+  - polars
+  - pandas
+  - great_tables
+  - selenium
+  - plotnine

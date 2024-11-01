@@ -49,6 +49,12 @@ We can add a table header to the GT table with a title and optionally a subtitle
 Use `gtcars` to create a GT table; add a header part to contain a `title` and `subtitle`.
 
 ```{python}
+!pip install great_tables
+!pip install polars
+!pip install selenium
+```
+
+```{python}
 from great_tables import GT, md
 from great_tables.data import exibble, gtcars
 import polars as pl

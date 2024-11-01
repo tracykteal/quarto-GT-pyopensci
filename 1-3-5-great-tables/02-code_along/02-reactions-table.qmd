@@ -41,6 +41,8 @@ reactions_mini
 Let's get the data into Great Tables. Plus let's make a stub.
 
 ```{python}
+#| eval: false
+
 gt_tbl_1 = # 
 
 gt_tbl_1
@@ -51,6 +53,8 @@ gt_tbl_1
 Add a title to the table to explain contents.
 
 ```{python}
+#| eval: false
+
 gt_tbl_2 = # (
     #gt_tbl_1
 #)
@@ -62,6 +66,8 @@ Group numerical columns with a spanner. Use this for the label:
 `"Reaction Rate Constant (298 K),<br>{{cm^3 molecules^–1 s^–1}}"`
 
 ```{python}
+#| eval: false
+
 gt_tbl_3 = # (
     # gt_tbl_2
 #)
@@ -73,6 +79,8 @@ Change Column labels for readability. The column names are:
 `cmpd_formula`, `OH_k298`, `O3_k298`, `NO3_k298`, and `Cl_k298`.
 
 ```{python}
+#| eval: false
+
 gt_tbl_4 = # (
     # gt_tbl_3
 #)
@@ -85,6 +93,8 @@ gt_tbl_4
 Format the chemical formulas to make them look better.
 
 ```{python}
+#| eval: false
+
 gt_tbl_5 = # (
     # gt_tbl_4
 #)
@@ -95,6 +105,8 @@ gt_tbl_5
 Format the numeric values.
 
 ```{python}
+#| eval: false
+
 gt_tbl_6 = # (
     # gt_tbl_5
 #)
@@ -105,6 +117,8 @@ gt_tbl_6
 Replace the `None` values.
 
 ```{python}
+#| eval: false
+
 gt_tbl_7 = # (
     # gt_tbl_6
 #)
@@ -115,6 +129,8 @@ gt_tbl_7
 Hide redundant columns.
 
 ```{python}
+#| eval: false
+
 gt_tbl_8 = # (
     # gt_tbl_7
 #)
@@ -127,6 +143,8 @@ gt_tbl_8
 Use theming to style quickly.
 
 ```{python}
+#| eval: false
+
 gt_tbl_9 = # (
     # gt_tbl_8
 #)
@@ -137,6 +155,8 @@ gt_tbl_9
 Don't use the default font.
 
 ```{python}
+#| eval: false
+
 gt_tbl_10 = # (
     # gt_tbl_9
 #)
@@ -147,6 +167,8 @@ gt_tbl_10
 Make more space between neighboring values.
 
 ```{python}
+#| eval: false
+
 gt_tbl_11 = # (
     # gt_tbl_10
 #)
